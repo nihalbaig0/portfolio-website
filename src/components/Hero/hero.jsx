@@ -5,9 +5,7 @@ import {
   Mail,
   MapPin,
   Calendar,
-  Download,
-  ExternalLink,
-  FileText
+  Download
 } from 'lucide-react';
 
 // Stats Component
@@ -28,39 +26,17 @@ const SocialLink = ({ href, icon: Icon }) => (
   </a>
 );
 
-// Achievement Card Component
-const AchievementCard = ({ icon: Icon, title, subtitle }) => (
-  <div className="bg-gray-800/90 backdrop-blur-sm p-3 rounded-xl border border-gray-700/50">
-    <Icon className="w-5 h-5 text-blue-400 mb-1" />
-    <p className="text-xs text-gray-300">{title}</p>
-    <p className="text-xs text-gray-400">{subtitle}</p>
-  </div>
-);
-
 const Hero = () => {
   const stats = [
-    { value: "3+", label: "Years Research" },
-    { value: "15+", label: "Publications" },
-    { value: "500+", label: "Citations" }
+    { value: "2", label: "Years Research Assistant" },
+    { value: "2", label: "Publications" },
+    { value: "1", label: "Year Professional Experience" }
   ];
 
   const socialLinks = [
-    { href: "#", icon: Github },
-    { href: "#", icon: Linkedin },
-    { href: "#", icon: Mail }
-  ];
-
-  const achievements = [
-    { 
-      icon: FileText, 
-      title: "Latest Publication", 
-      subtitle: "ICML 2024" 
-    },
-    { 
-      icon: ExternalLink, 
-      title: "Featured Project", 
-      subtitle: "Neural Networks" 
-    }
+    { href: "https://github.com/nihalbaig0", icon: Github },
+    { href: "https://www.linkedin.com/in/mirza-nihal-baig-0361971a0/", icon: Linkedin },
+    { href: "mailto:nihalmd1@gmail.com", icon: Mail }
   ];
 
   return (
@@ -82,6 +58,9 @@ const Hero = () => {
               <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
                 Miza Nihal Baig
               </h1>
+              <p className="text-lg text-gray-400">
+                Machine Learning Engineer
+              </p>
               <p className="text-lg text-gray-400">
                 Computer Science and Engineering Graduate Student
               </p>
@@ -112,7 +91,7 @@ const Hero = () => {
             <div className="flex flex-wrap items-center gap-4 pt-3">
               <div className="flex items-center gap-2 text-gray-400">
                 <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+                <span>Dhaka, Bangladesh</span>
               </div>
               <div className="flex items-center gap-3">
                 {socialLinks.map((link, index) => (
@@ -130,40 +109,26 @@ const Hero = () => {
           </div>
 
           {/* Right Column - Profile Image */}
-          <div className="relative">
-            <div className="relative group">
-              {/* Background Effects */}
+          <div className="relative flex justify-center items-center h-full">
+            <div className="relative group w-[32rem]">
+              {/* Animated background pattern */}
+              <div className="absolute inset-0 -m-8 bg-gray-900 rounded-3xl overflow-hidden">
+                <div className="absolute inset-0 bg-grid-white/[0.02] animate-[pulse_4s_ease-in-out_infinite]" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900 to-gray-900" />
+              </div>
+              
+              {/* Gradient border effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-30 group-hover:opacity-40 transition duration-1000 group-hover:duration-200" />
               
-              {/* Image Container */}
-              <div className="relative">
-                <div className="rounded-2xl overflow-hidden border-2 border-gray-700/50 group-hover:border-blue-500/50 transition duration-300">
-                  <img 
-                    src="/api/placeholder/400/500"
-                    alt="Profile Picture"
-                    className="w-full h-[400px] object-cover transition duration-300 group-hover:scale-105"
-                  />
-                </div>
+              <div className="relative rounded-2xl overflow-hidden">
+                <img 
+                  src="src/assets/portfolio_img.jpg"
+                  alt="Profile Picture"
+                  className="relative w-full h-auto transition duration-300 group-hover:scale-105"
+                />
 
-                {/* Availability Badge */}
-                <div className="absolute -bottom-4 -right-4 p-3 bg-gray-800/90 backdrop-blur-sm rounded-xl border border-gray-700/50">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                    <span className="text-xs text-gray-300">Available for opportunities</span>
-                  </div>
-                </div>
               </div>
             </div>
-
-            {/* Floating Achievement Cards */}
-            {achievements.map((achievement, index) => (
-              <div 
-                key={index}
-                className={`absolute ${index === 0 ? '-right-8 top-1/4 rotate-6' : '-left-8 bottom-1/4 -rotate-6'}`}
-              >
-                <AchievementCard {...achievement} />
-              </div>
-            ))}
           </div>
         </div>
       </div>
