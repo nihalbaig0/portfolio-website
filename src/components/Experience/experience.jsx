@@ -39,7 +39,7 @@ const professionalExperience = [
   {
     title: "Research Assistant",
     company: "Shahjalal University of Science and Technology",
-    period: "2020 - 2021",
+    period: "2022 - 2024",
     description: "Worked as a Research Assistant with Professor Mohammad Shahidur Rahman at Shahjalal University of Science and Technology, focusing on research in Object Detection, Instance Segmentation, and Speech-to-Speech translation.",
     technologies: ["Computer Vision", "ASR", "OCR", "LLM"],
     icon: School
@@ -48,39 +48,50 @@ const professionalExperience = [
 
 const voluntaryExperience = [
   {
+    title: "Event Lead - DL Enigma 1.0",
+    organization: "SUST CSE Carnival 2024",
+    period: "2024",
+    icon: Brain,
+    description: "Organized Bangladesh's first national deep learning competition focused on autonomous vehicle object detection for local road conditions.",
+    achievements: [
+      "Curated specialized dataset of Bangladeshi road scenarios",
+      "Coordinated with 100+ participants from multiple universities",
+      "Managed evaluation pipeline for object detection models",
+      "Secured industry sponsorships and professional judges"
+    ]
+  },
+  {
     title: "Microsoft Learn Student Ambassador",
     organization: "Microsoft",
-    period: "2023 - Present",
+    period: "2023 - 2024",
     icon: Users,
-    description: "Empowering students with technology skills through workshops and events. Organized 10+ technical workshops reaching 500+ students.",
+    description: "Empowering students with technology skills through workshops and events. Organized 2 technical workshops and one community project.",
     achievements: [
-      "Gold status achievement for community impact",
+      "Beta status achievement for community impact",
       "Led Azure cloud computing workshops",
-      "Mentored 20+ student developers"
+      "Mentored students for Pre-Alpha stage"
     ]
   },
   {
     title: "Director of Robotics",
     organization: "University Robotics Club",
-    period: "2022 - 2023",
+    period: "2023 - 2024",
     icon: Rocket,
     description: "Led a team of 30 students in robotics projects and competitions. Managed budget and coordinated with faculty advisors.",
     achievements: [
-      "Won first place in national robotics competition",
-      "Secured $10,000 in sponsorships",
-      "Organized 2 successful robotics hackathons"
+      "Judge of Line Follower Robot Competition",
+      "Responsible for Curriculum of Workshops and Technical Projects",
+      "Organized 2 successful robotics Workshops"
     ]
   },
   {
     title: "Section Leader",
     organization: "Stanford University",
-    period: "2022 - 2023",
+    period: "2023" ,
     icon: School,
     description: "Teaching assistant for CS106A Programming Methodology. Conducted weekly sessions and provided one-on-one mentoring.",
     achievements: [
-      "Mentored 50+ students per quarter",
-      "Achieved 4.8/5.0 student satisfaction rating",
-      "Developed supplementary learning materials"
+      "Mentored 10+ students from different countries",
     ]
   }
 ];

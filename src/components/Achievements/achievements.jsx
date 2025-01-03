@@ -5,42 +5,42 @@ const achievementData = [
   {
     id: 1,
     title: "Best Paper Award",
-    event: "International Conference on Machine Learning (ICML) 2023",
+    event: "6th International Conference on Electrical Information and Communication Technology (EICT) 2023",
     description: "Received the Best Paper Award for groundbreaking research in self-supervised learning techniques.",
-    impact: "Research cited by 200+ papers within 6 months",
+    impact: "",
     icon: Trophy,
-    link: "#",
+    link: "https://drive.google.com/file/d/16Jtun8bnplcbE0rQOwZ_d5HId3FxejFY/view?usp=sharing",
     category: "research"
   },
   {
     id: 2,
-    title: "Research Grant Recipient",
-    event: "National Science Foundation",
+    title: "4th Position | DLSprint 2.0",
+    event: "Buet CSE Fest",
     description: "Awarded $500,000 research grant for innovative work in computer vision applications.",
-    impact: "Funding secured for 2-year research project",
+    impact: "",
     icon: Medal,
     category: "grant",
-    link: "#"
+    link: "https://www.kaggle.com/competitions/dlsprint2/discussion/433389"
   },
   {
     id: 3,
-    title: "Academic Excellence",
-    event: "Department of Computer Science",
-    description: "Maintained 4.0 GPA throughout graduate studies while publishing 5 peer-reviewed papers.",
-    impact: "Top 1% of graduating class",
+    title: "Honourable Mention (Placed in the Top 8)",
+    event: "AI for Bangla 2.0",
+    description: "As part of Team SIGN_SUST, developed a complete pipeline for detecting Bengali Sign Language, encompassing the entire workflow from data annotation to deployment.",
+    impact: "",
     icon: Star,
     category: "academic",
-    link: "#"
+    link: "https://drive.google.com/file/d/1Ygq_FRvmM-p80Pwry2p7xh5TmvmEmOuc/view?usp=sharing"
   },
   {
     id: 4,
-    title: "Hackathon Winner",
-    event: "Global AI Challenge 2023",
-    description: "Led team to first place with an innovative AI-powered healthcare solution.",
-    impact: "Selected from 500+ international teams",
+    title: "Finalist at Hult Prize Campus Round (Top 5)",
+    event: "Hult Prize 2024",
+    description: "As part of Team Nebula Pulse, developed an IoT-based Pill Dispenser that ensures timely medication for elderly individuals and utilizes Azure Computer Vision to detect pills.",
+    impact: "",
     icon: Sparkles,
     category: "competition",
-    link: "#"
+    link: "https://www.facebook.com/share/p/UwZaBEXCNwRDLWG3/"
   }
 ];
 

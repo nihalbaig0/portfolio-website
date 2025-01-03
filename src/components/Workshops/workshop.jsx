@@ -4,44 +4,46 @@ import { Calendar, Users, ExternalLink, Monitor, Presentation, Video, FileText, 
 const workshopsData = [
   {
     id: 1,
-    title: "Introduction to Deep Learning with PyTorch",
-    event: "AI Conference 2024",
+    title: "Introduction to Azure IoT",
+    event: "Global Azure Bangladesh",
     date: "April 15, 2024",
     type: "workshop",
-    attendees: "150+",
-    description: "A hands-on workshop covering the fundamentals of deep learning using PyTorch, including practical exercises and real-world applications.",
+    attendees: "15+",
+    description: "Conducted the Introduction to Azure IoT session at Global Azure Bangladesh, where I taught IoT concepts using a Raspberry Pi simulator in Azure.",
     resources: [
-      { type: "Slides", icon: Presentation, url: "#" },
-      { type: "Code", icon: FileText, url: "#" },
-      { type: "Video", icon: Video, url: "#" }
+      // { type: "Slides", icon: Presentation, url: "#" },
+      // { type: "Code", icon: FileText, url: "#" },
+      { type: "Video", icon: Video, url: "https://www.youtube.com/watch?v=fKYSOvpInFo&t=2996s" }
     ],
     tags: ["Deep Learning", "PyTorch", "Neural Networks"]
   },
   {
     id: 2,
-    title: "The Future of Computer Vision",
-    event: "Tech Summit 2024",
+    title: "Object Detection with Azure Custom Vision",
+    event: "Microsoft Learn Student Ambassador",
     date: "March 1, 2024",
     type: "keynote",
     attendees: "300+",
-    description: "An exploration of emerging trends in computer vision and their potential impact on various industries.",
+    description: "Conducted a session on Object Detection with Azure Custom Vision as a Microsoft Learn Student Ambassador (MLSA).",
     resources: [
-      { type: "Slides", icon: Presentation, url: "#" },
-      { type: "Video", icon: Video, url: "#" }
+      // { type: "Slides", icon: Presentation, url: "#" },
+      { type: "Video", icon: Video, url: "https://www.facebook.com/events/2161602314002191?active_tab=about" }
     ],
     tags: ["Computer Vision", "AI", "Future Tech"]
   },
   {
     id: 3,
-    title: "Building Scalable ML Systems",
-    event: "Developer Conference 2024",
+    title: "Introduction to GitHub Codespace for Machine Learning",
+    event: "Microsoft Learn Student Ambassador",
     date: "February 20, 2024",
     type: "talk",
     attendees: "200+",
-    description: "Best practices and architectural patterns for building production-ready machine learning systems.",
+    description: "Conducted a session on Introduction to GitHub Codespaces for Machine Learning as a Microsoft Learn Student Ambassador (MLSA), demonstrating how to use GitHub Codespaces for various machine learning tasks..",
     resources: [
-      { type: "Slides", icon: Presentation, url: "#" },
-      { type: "Code", icon: FileText, url: "#" }
+      // { type: "Slides", icon: Presentation, url: "#" },
+      // { type: "Code", icon: FileText, url: "#" },
+      { type: "Video", icon: Video, url: "https://www.facebook.com/events/1182648232398042/?active_tab=discussion" }
+
     ],
     tags: ["MLOps", "System Design", "Best Practices"]
   }

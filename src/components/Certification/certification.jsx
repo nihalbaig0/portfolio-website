@@ -62,11 +62,11 @@ const CertificationCard = ({ certification }) => {
 const certificationData = [
   {
     id: 1,
-    name: "AWS Certified Solutions Architect - Professional",
-    issuer: "Amazon Web Services",
+    name: "Azure Fundamentals (AZ-900)",
+    issuer: "Microsoft",
     date: "December 2023",
     credentialId: "AWS-123456",
-    verificationUrl: "#",
+    verificationUrl: "https://www.credly.com/badges/56b05652-62c2-42d3-90b1-17e77f3cb19f?source=linked_in_profile",
     skills: [
       "Cloud Architecture",
       "AWS Services",
@@ -77,11 +77,11 @@ const certificationData = [
   },
   {
     id: 2,
-    name: "TensorFlow Developer Certificate",
-    issuer: "Google",
+    name: "AI Product Manager (NanoDegree)",
+    issuer: "Udacity",
     date: "October 2023",
     credentialId: "TF-789012",
-    verificationUrl: "#",
+    verificationUrl: "confirm.udacity.com/WCGKA2QD",
     skills: [
       "Deep Learning",
       "Neural Networks",
@@ -92,11 +92,11 @@ const certificationData = [
   },
   {
     id: 3,
-    name: "Microsoft Azure AI Engineer Associate",
-    issuer: "Microsoft",
+    name: "Fundamentals of Deep Learning - Nvidia DLI Workshop",
+    issuer: "Nvidia",
     date: "August 2023",
     credentialId: "AZ-345678",
-    verificationUrl: "#",
+    verificationUrl: "https://courses.nvidia.com/certificates/eec5ed44eaf642aca886ed0edc5956cd",
     skills: [
       "Azure ML",
       "Cognitive Services",
@@ -107,11 +107,11 @@ const certificationData = [
   },
   {
     id: 4,
-    name: "Deep Learning Specialization",
-    issuer: "DeepLearning.AI",
+    name: "Kubernetes Fundamentals (LFS258)",
+    issuer: "The Linux Foundation",
     date: "July 2023",
     credentialId: "DL-901234",
-    verificationUrl: "#",
+    verificationUrl: "https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/7657fb91-0388-4685-9725-69f405868ea0-mirza-nihal-baig-f9f59e1b-a2dd-4002-901c-77c102a04245-certificate.pdf",
     skills: [
       "CNN",
       "RNN",

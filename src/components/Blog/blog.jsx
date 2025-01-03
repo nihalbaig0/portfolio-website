@@ -16,56 +16,60 @@ import {
 const blogPosts = [
   {
     id: 1,
-    title: "Understanding Transformer Architecture",
-    date: "March 15, 2024",
+    title: "Stream Data to Azure IoT Hub from Raspberry Pi",
+    date: "Feb 25, 2024",
     readTime: "8 min read",
-    preview: "A deep dive into the architecture that revolutionized natural language processing and its practical applications.",
+    preview: "This is a Basic IoT Project where I have used used my Raspberry Pi to stream data to Microsoft Azure. It will be helpful for beginners who want to know about IoT and Azure.",
     image: "/api/placeholder/800/400",
-    tags: ["Machine Learning", "NLP", "Deep Learning"],
-    category: "machine-learning",
-    likes: 156,
-    comments: 23,
-    saved: false
+    tags: ["Azure", "Raspberry Pi"],
+    category: "robotics",
+    likes: 4,
+    comments: 0,
+    saved: false,
+    url: "https://dev.to/nihalbaig0/stream-data-to-azure-iot-hub-from-raspberry-pi-1ed3"
   },
   {
     id: 2,
-    title: "Optimizing Neural Networks for Production",
-    date: "February 28, 2024",
+    title: "Fastest way to set up SSH and VNC Server in Raspberry Pi without Monitor ( Headless mode)",
+    date: "June 6, 2022",
     readTime: "6 min read",
-    preview: "Practical techniques for improving neural network performance and reducing training time in production environments.",
+    preview: "Setting up raspberry pi without a monitor is a hassle for most of us. You have to manually set up the ssh config and find out the IP address of Pi using Third-Party Software. But Raspberry pi imager has a secret settings menu that can make the process really easy.",
     image: "/api/placeholder/800/400",
-    tags: ["Neural Networks", "Optimization", "PyTorch"],
-    category: "deep-learning",
-    likes: 234,
-    comments: 45,
-    saved: false
+    tags: ["Raspberry Pi", "SSH", "Linux"],
+    category: "robotics",
+    likes: 11,
+    comments: 0,
+    saved: false,
+    url: "https://medium.com/@nihalmd1/fastest-way-to-set-up-ssh-and-vnc-server-in-raspberry-pi-without-monitor-headless-mode-d4f516689046"
   },
-  {
-    id: 3,
-    title: "Building Scalable MLOps Pipelines",
-    date: "February 10, 2024",
-    readTime: "10 min read",
-    preview: "A comprehensive guide to implementing MLOps practices in your machine learning projects using modern tools and techniques.",
-    image: "/api/placeholder/800/400",
-    tags: ["MLOps", "DevOps", "CI/CD"],
-    category: "mlops",
-    likes: 189,
-    comments: 34,
-    saved: false
-  },
-  {
-    id: 4,
-    title: "React Performance Optimization Techniques",
-    date: "January 25, 2024",
-    readTime: "7 min read",
-    preview: "Advanced strategies for optimizing React applications, including code splitting, memoization, and state management.",
-    image: "/api/placeholder/800/400",
-    tags: ["React", "JavaScript", "Performance"],
-    category: "web-development",
-    likes: 210,
-    comments: 28,
-    saved: false
-  }
+  // {
+  //   id: 3,
+  //   title: "Building Scalable MLOps Pipelines",
+  //   date: "February 10, 2024",
+  //   readTime: "10 min read",
+  //   preview: "A comprehensive guide to implementing MLOps practices in your machine learning projects using modern tools and techniques.",
+  //   image: "/api/placeholder/800/400",
+  //   tags: ["MLOps", "DevOps", "CI/CD"],
+  //   category: "mlops",
+  //   likes: 189,
+  //   comments: 34,
+  //   saved: false,
+  //   url: "/blog/building-scalable-mlops-pipelines"
+  // },
+  // {
+  //   id: 4,
+  //   title: "React Performance Optimization Techniques",
+  //   date: "January 25, 2024",
+  //   readTime: "7 min read",
+  //   preview: "Advanced strategies for optimizing React applications, including code splitting, memoization, and state management.",
+  //   image: "/api/placeholder/800/400",
+  //   tags: ["React", "JavaScript", "Performance"],
+  //   category: "web-development",
+  //   likes: 210,
+  //   comments: 28,
+  //   saved: false,
+  //   url: "/blog/react-performance-optimization"
+  // }
 ];
 
 const categories = [
@@ -73,7 +77,8 @@ const categories = [
   { id: "machine-learning", label: "Machine Learning" },
   { id: "deep-learning", label: "Deep Learning" },
   { id: "mlops", label: "MLOps" },
-  { id: "web-development", label: "Web Development" }
+  { id: "web-development", label: "Web Development" },
+  { id: "robotics", label: "Robotics" }
 ];
 
 const BlogCard = ({ post, onSave }) => {
@@ -81,12 +86,14 @@ const BlogCard = ({ post, onSave }) => {
     <div className="group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 overflow-hidden hover:border-blue-500/50 transition-all duration-300">
       {/* Image Container */}
       <div className="relative h-48 overflow-hidden">
-        <img 
-          src={post.image}
-          alt={post.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent" />
+        <a href={post.url} className="block h-full">
+          <img 
+            src={post.image}
+            alt={post.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent" />
+        </a>
         
         {/* Tags Overlay */}
         <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
@@ -116,12 +123,14 @@ const BlogCard = ({ post, onSave }) => {
         </div>
 
         {/* Title and Preview */}
-        <h3 className="text-xl font-semibold mb-3 text-gray-100 group-hover:text-blue-400 transition-colors duration-300">
-          {post.title}
-        </h3>
-        <p className="text-gray-400 mb-6">
-          {post.preview}
-        </p>
+        <a href={post.url} className="block group">
+          <h3 className="text-xl font-semibold mb-3 text-gray-100 group-hover:text-blue-400 transition-colors duration-300">
+            {post.title}
+          </h3>
+          <p className="text-gray-400 mb-6">
+            {post.preview}
+          </p>
+        </a>
 
         {/* Action Buttons */}
         <div className="flex items-center justify-between">
@@ -148,7 +157,7 @@ const BlogCard = ({ post, onSave }) => {
               <Bookmark className="w-4 h-4" />
             </button>
             <a 
-              href="#"
+              href={post.url}
               className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors duration-300"
             >
               Read More

@@ -122,7 +122,7 @@ const Hero = () => {
               
               <div className="relative rounded-2xl overflow-hidden">
                 <img 
-                  src="src/assets/portfolio_img.jpg"
+                  src="https://github.com/nihalbaig0/portfolio-website/blob/main/src/assets/portfolio_img.jpg?raw=true"
                   alt="Profile Picture"
                   className="relative w-full h-auto transition duration-300 group-hover:scale-105"
                 />
