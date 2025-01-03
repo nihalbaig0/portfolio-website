@@ -3,9 +3,9 @@ import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
 
 const ContactInfo = () => {
   const contactDetails = {
-    email: "john.doe@email.com",
-    phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA",
+    email: "nihalmd1@gmail.com",
+    phone: "",
+    location: "Dhaka, Bangladesh",
     socials: [
       { icon: Github, link: "#", label: "GitHub" },
       { icon: Linkedin, link: "#", label: "LinkedIn" }
