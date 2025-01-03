@@ -13,52 +13,6 @@ import BlogPosts from './components/Blog/blog';
 import Hero from './components/Hero/hero';
 import Featured from './components/Featured/featured';
 import Contact from './components/Contact/contact';
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ExternalLink,
-  Rocket,
-  Code,
-  Monitor,
-  Settings,
-  Cpu,
-  Calendar,
-  Clock,
-  Users,
-  Database,
-  Cloud,
-  BookOpen,
-  Microscope,
-  GraduationCap,
-  Brain,
-  Target,
-  Award,
-  Check,
-  Trophy,
-  Medal,
-  Star,
-  Sparkles,
-  FileText,
-  Download,
-  ArrowRight,
-  Heart,
-  School,
-  Send,
-  MessageSquare,
-  Building2,
-  Briefcase,
-  Layers,
-  Terminal,
-  Server,
-  Box,
-   CalendarDays,
-   Globe
-} from 'lucide-react';
-
-
 
 const Portfolio = () => {
 
@@ -75,28 +29,35 @@ const Portfolio = () => {
       <main className="max-w-6xl mx-auto px-6 py-20 space-y-32">
         
        
-      <BlogPosts />
+     
 
         
         {/* Experience Section */}  
         <ExperienceSection />
 
-          
-          <Skills />
+        {/* Skills Section */}
+        <Skills />
 
-
-          {/* Projects Section */}
-        <FilteredProjects />
-        
-        <WorkshopsAndTalks />
-
+       {/* Achievements Section */}
         <NotableAchievements />
 
+        {/* Projects Section */}
+        <FilteredProjects />
+
+        {/* Publication Section */}
         <Publications />
 
+        {/* Certifications Section */}
         <Certifications />
-  
-        <Featured />
+        
+        {/* Blogs Section */}
+        <BlogPosts />
+
+        {/* Workshop Section */}
+        <WorkshopsAndTalks />
+
+      {/* Workshop Section */}
+       <Featured />
 
         <Contact />
 
