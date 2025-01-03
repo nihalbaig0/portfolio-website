@@ -16,71 +16,33 @@ const featuredContent = {
     {
       id: 1,
       type: 'article',
-      outlet: "TechCrunch",
-      title: "Rising Star in AI Research: Breakthrough in Computer Vision",
-      excerpt: "An innovative approach to neural networks is revolutionizing how machines interpret visual data, with potential applications across industries from healthcare to autonomous vehicles.",
-      date: "Dec 15, 2023",
+      outlet: "Prothom Alo",
+      title: "First Autonomous Car Development Breakthrough",
+      excerpt: "A groundbreaking achievement in autonomous vehicle technology marks a significant milestone in Bangladesh's tech innovation landscape.",
+      date: "2024",
       image: "/api/placeholder/400/400",
-      url: "#",
-      likes: "2.5K",
-      comments: "128",
+      url: "https://www.prothomalo.com/lifestyle/je3nc91c98",
+      likes: "3.2K",
+      comments: "245",
       icon: Newspaper
     },
     {
       id: 2,
       type: 'article',
-      outlet: "MIT Technology Review",
-      title: "Next Generation of AI Researchers to Watch",
-      excerpt: "Among the brightest minds shaping the future of artificial intelligence, this researcher stands out for their work on efficient neural architectures and real-world applications.",
-      date: "Nov 28, 2023",
+      outlet: "Prothom Alo Bondhushova",
+      title: "Innovation Workshop at Leading University",
+      excerpt: "An engaging workshop session at Leading University, sharing insights on technology innovation and future developments in autonomous systems.",
+      date: "2024",
       image: "/api/placeholder/400/400",
       url: "#",
-      likes: "1.8K",
-      comments: "95",
+      likes: "1.5K",
+      comments: "156",
       icon: Newspaper
-    }
-  ],
-  podcasts: [
-    {
-      id: 3,
-      type: 'podcast',
-      outlet: "AI Research Weekly",
-      title: "Discussing the Future of Computer Vision",
-      excerpt: "A deep dive into the latest developments in computer vision technology and its potential impact on various industries.",
-      date: "Jan 10, 2024",
-      duration: "45 mins",
-      url: "#",
-      icon: Radio
-    }
-  ],
-  interviews: [
-    {
-      id: 4,
-      type: 'video',
-      outlet: "Tech Insights",
-      title: "Building AI Systems for Real-World Applications",
-      excerpt: "An in-depth discussion about the challenges and opportunities in deploying AI systems in production environments.",
-      date: "Dec 5, 2023",
-      duration: "28 mins",
-      url: "#",
-      thumbnail: "/api/placeholder/400/300",
-      icon: Video
-    }
-  ],
-  mentions: [
-    {
-      id: 5,
-      type: 'mention',
-      outlet: "Forbes",
-      title: "30 Under 30 - AI & Machine Learning",
-      excerpt: "Recognition for outstanding contributions to the field of artificial intelligence and machine learning.",
-      date: "Jan 2024",
-      url: "#",
-      icon: Award
     }
   ]
 };
 
+// Rest of the component code remains the same
 const FeaturedCard = ({ item }) => {
   const Icon = item.icon;
   
@@ -97,19 +59,6 @@ const FeaturedCard = ({ item }) => {
           </div>
         )}
         
-        {item.type === 'video' && (
-          <div className="flex-shrink-0 w-40 h-32 relative overflow-hidden rounded-lg">
-            <img 
-              src={item.thumbnail} 
-              alt={item.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            />
-            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-              <Video className="w-8 h-8 text-white" />
-            </div>
-          </div>
-        )}
-        
         <div className="flex-1">
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
             <div className="p-1.5 bg-blue-500/10 rounded-lg">
@@ -123,12 +72,6 @@ const FeaturedCard = ({ item }) => {
               <CalendarDays className="w-4 h-4" />
               {item.date}
             </div>
-            {item.duration && (
-              <>
-                <span>•</span>
-                <span>{item.duration}</span>
-              </>
-            )}
           </div>
           
           <h3 className="text-xl font-semibold text-gray-100 group-hover:text-blue-400 transition-colors duration-300 mb-2">
@@ -148,18 +91,16 @@ const FeaturedCard = ({ item }) => {
               <ExternalLink className="w-4 h-4" />
             </a>
             
-            {item.type === 'article' && (
-              <div className="flex items-center gap-4 text-gray-400">
-                <span className="flex items-center gap-1">
-                  <Heart className="w-4 h-4" />
-                  {item.likes}
-                </span>
-                <span className="flex items-center gap-1">
-                  <MessageSquare className="w-4 h-4" />
-                  {item.comments}
-                </span>
-              </div>
-            )}
+            <div className="flex items-center gap-4 text-gray-400">
+              <span className="flex items-center gap-1">
+                <Heart className="w-4 h-4" />
+                {item.likes}
+              </span>
+              <span className="flex items-center gap-1">
+                <MessageSquare className="w-4 h-4" />
+                {item.comments}
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -170,7 +111,6 @@ const FeaturedCard = ({ item }) => {
 const Featured = () => {
   return (
     <section className="relative py-20">
-      {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-purple-500/5 to-transparent" />
         <div className="absolute inset-0 bg-grid-white/[0.02]" />
@@ -187,24 +127,8 @@ const Featured = () => {
         </div>
 
         <div className="space-y-6">
-          {/* Articles */}
           {featuredContent.articles.map(article => (
             <FeaturedCard key={article.id} item={article} />
-          ))}
-          
-          {/* Podcasts */}
-          {featuredContent.podcasts.map(podcast => (
-            <FeaturedCard key={podcast.id} item={podcast} />
-          ))}
-          
-          {/* Interviews */}
-          {featuredContent.interviews.map(interview => (
-            <FeaturedCard key={interview.id} item={interview} />
-          ))}
-          
-          {/* Mentions */}
-          {featuredContent.mentions.map(mention => (
-            <FeaturedCard key={mention.id} item={mention} />
           ))}
         </div>
       </div>

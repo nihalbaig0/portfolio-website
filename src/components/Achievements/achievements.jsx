@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, Medal, Star, Sparkles, ExternalLink } from 'lucide-react';
+import { Trophy, Medal, Star, Sparkles, ExternalLink, Anchor, Car } from 'lucide-react';
 
 const achievementData = [
   {
@@ -41,6 +41,26 @@ const achievementData = [
     icon: Sparkles,
     category: "competition",
     link: "https://www.facebook.com/share/p/UwZaBEXCNwRDLWG3/"
+  },
+  {
+    id: 5,
+    title: "Selected for SAUVC 2025",
+    event: "Singapore AUV Challenge 2025",
+    description: "Our team SUST_ONUSONDHAN was selected to compete in the prestigious international underwater robotics competition in Singapore, showcasing innovative autonomous underwater vehicle technology.",
+    impact: "",
+    icon: Anchor,
+    category: "competition",
+    link: "https://sauvc.org/#teams"  // You can update this with the actual link
+  },
+  {
+    id: 6,
+    title: "Pre-seed Funding Recipient",
+    event: "University Innovation HUB Program",
+    description: "Secured pre-seed funding for the development of an Autonomous Car project, demonstrating innovative potential in autonomous vehicle technology.",
+    impact: "",
+    icon: Car,
+    category: "grant",
+    link: "https://web.facebook.com/story.php?story_fbid=122181036188119414&id=61553582439464&rdid=GeTs7HvlUw0G5qY8"  // You can update this with the actual link
   }
 ];
 
