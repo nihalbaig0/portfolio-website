@@ -9,7 +9,7 @@ import {
   Download
 } from 'lucide-react';
 
-// StatBox and SocialLink components remain the same
+// Stats Component
 const StatBox = ({ value, label }) => (
   <div className="bg-gray-800/50 backdrop-blur-sm p-3 rounded-xl border border-gray-700/50">
     <div className="text-xl font-bold text-blue-400 mb-1">{value}</div>
@@ -17,10 +17,13 @@ const StatBox = ({ value, label }) => (
   </div>
 );
 
+// Social Link Component
 const SocialLink = ({ href, icon: Icon }) => (
   <a 
     href={href} 
     className="p-2 bg-gray-800/50 rounded-lg hover:bg-blue-500/20 text-gray-400 hover:text-blue-400 transition-all duration-300"
+    target="_blank"
+    rel="noopener noreferrer"
   >
     <Icon className="w-4 h-4" />
   </a>
@@ -41,7 +44,7 @@ const Hero = () => {
 
   return (
     <header className="relative overflow-hidden min-h-screen flex items-center">
-      {/* Background Effects remain the same */}
+      {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 via-purple-500/5 to-transparent" />
         <div className="absolute inset-0 bg-grid-white/[0.02]" />
@@ -51,13 +54,12 @@ const Hero = () => {
 
       <div className="max-w-6xl mx-auto px-6 py-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Left Column - Profile Info remains the same */}
+          {/* Left Column - Profile Info */}
           <div className="space-y-6">
-            {/* Previous content remains unchanged */}
             <div className="space-y-3">
               <h4 className="text-blue-400 font-medium">Hi there, I'm</h4>
               <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-                Miza Nihal Baig
+                Mirza Nihal Baig
               </h1>
               <p className="text-lg text-gray-400">
                 Machine Learning Engineer
@@ -67,9 +69,43 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Rest of the left column content remains the same */}
-            {/* ... */}
+            <p className="text-gray-300 text-base leading-relaxed">
+              Passionate about artificial intelligence and its applications in solving real-world problems. 
+              Currently working on AI, Robotics, MLOPS and Cloud.
+            </p>
 
+            <div className="flex flex-wrap gap-3">
+              <a 
+                href="#contact" 
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-500 text-white hover:bg-blue-600 transition-all duration-300"
+              >
+                <Mail className="w-4 h-4" />
+                Contact Me
+              </a>
+              <a 
+                href="/path-to-your-cv.pdf" 
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700 hover:border-blue-500 transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="w-4 h-4" />
+                Download CV
+              </a>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4 pt-3">
+              <div className="flex items-center gap-2 text-gray-400">
+                <MapPin className="w-4 h-4" />
+                <span>Dhaka, Bangladesh</span>
+              </div>
+              <div className="flex items-center gap-3">
+                {socialLinks.map((link, index) => (
+                  <SocialLink key={index} {...link} />
+                ))}
+              </div>
+            </div>
+
+            {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-3">
               {stats.map((stat, index) => (
                 <StatBox key={index} {...stat} />
@@ -77,28 +113,28 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - Optimized Profile Image */}
+          {/* Right Column - Profile Image */}
           <div className="relative flex justify-center items-center h-full">
             <div className="relative group w-[32rem]">
-              {/* Animated background pattern remains the same */}
+              {/* Animated background pattern */}
               <div className="absolute inset-0 -m-8 bg-gray-900 rounded-3xl overflow-hidden">
                 <div className="absolute inset-0 bg-grid-white/[0.02] animate-[pulse_4s_ease-in-out_infinite]" />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900 to-gray-900" />
               </div>
               
-              {/* Gradient border effect remains the same */}
+              {/* Gradient border effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-30 group-hover:opacity-40 transition duration-1000 group-hover:duration-200" />
               
               <div className="relative rounded-2xl overflow-hidden">
                 <Image 
-                  src="/portfolio_optimized.jpg"  // Move image to public folder
+                  src="/images/profile.jpg"  // Assuming image is in public/images folder
                   alt="Mirza Nihal Baig - Profile Picture"
-                  width={1024}  // Original image width
-                  height={1024} // Original image height
-                  priority={true} // Load immediately as it's above the fold
-                  quality={85}   // Slightly higher quality for profile photo
+                  width={1024}
+                  height={1024}
+                  priority={true}
+                  quality={85}
                   placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRg..." // Add your base64 blur image
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRg..." // Add your base64 blur image here
                   className="relative w-full h-auto transition duration-300 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
