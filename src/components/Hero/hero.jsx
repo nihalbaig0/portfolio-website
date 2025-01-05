@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import {
   Github,
   Linkedin,
@@ -126,17 +125,11 @@ const Hero = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-30 group-hover:opacity-40 transition duration-1000 group-hover:duration-200" />
               
               <div className="relative rounded-2xl overflow-hidden">
-                <Image 
-                  src="/images/profile.jpg"  // Assuming image is in public/images folder
+                <img 
+                  src="https://github.com/nihalbaig0/portfolio-website/blob/main/src/assets/portfolio_optimized.jpg?raw=true"
                   alt="Mirza Nihal Baig - Profile Picture"
-                  width={1024}
-                  height={1024}
-                  priority={true}
-                  quality={85}
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRg..." // Add your base64 blur image here
                   className="relative w-full h-auto transition duration-300 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="eager"
                 />
               </div>
             </div>
