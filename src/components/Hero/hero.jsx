@@ -126,7 +126,7 @@ const Hero = () => {
               
               <div className="relative rounded-2xl overflow-hidden">
                 <img 
-                  src="https://github.com/nihalbaig0/portfolio-website/blob/main/src/assets/portfolio_optimized.jpg?raw=true"
+                  src="https://res.cloudinary.com/dopt528wp/image/upload/v1736094587/portfolio_optimized_jwvgmc.jpg"
                   alt="Mirza Nihal Baig - Profile Picture"
                   className="relative w-full h-auto transition duration-300 group-hover:scale-105"
                   loading="eager"
