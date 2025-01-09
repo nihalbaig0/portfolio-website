@@ -69,7 +69,7 @@ const Portfolio = () => {
       <footer className="border-t border-gray-800">
         <div className="max-w-6xl mx-auto px-6 py-12">
           <p className="text-center text-gray-500">
-            © 2024 John Doe. All rights reserved.
+            © Made By MIRZA NIHAL BAIG
           </p>
         </div>
       </footer>
