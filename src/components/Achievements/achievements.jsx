@@ -16,7 +16,7 @@ const achievementData = [
     id: 2,
     title: "4th Position | DLSprint 2.0",
     event: "Buet CSE Fest",
-    description: "Awarded $500,000 research grant for innovative work in computer vision applications.",
+    description: "Secured 4th position for our work on LayoutLM for Layout Detection.",
     impact: "",
     icon: Medal,
     category: "grant",

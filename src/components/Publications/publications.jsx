@@ -35,10 +35,10 @@ const publicationsData = [
     type: "workshop",
     abstract: "We present a new self-supervised learning framework that achieves state-of-the-art performance on various computer vision tasks while requiring significantly less computational resources.",
     citations: 0,
-    code: "https://github.com/username/project",
+    //code: "https://github.com/username/project",
     paper: "https://openreview.net/forum?id=dQZ9zwWI64",
-    demo: "https://demo.project.com",
-    dataset: "https://dataset.project.com",
+    //demo: "https://demo.project.com",
+    //dataset: "https://dataset.project.com",
     tags: ["Computer Vision", "Self-Supervised Learning", "Deep Learning"]
   },
   {
@@ -53,8 +53,8 @@ const publicationsData = [
     year: "2023",
     type: "conference",
     abstract: "This paper introduces a novel neural architecture search method that optimizes both model performance and inference time, making it particularly suitable for real-time applications.",
-    citations: 78,
-    code: "https://github.com/username/nas-project",
+    citations: 0,
+    code: "https://github.com/nihalbaig0/Nagri-OCR/tree/main",
     paper: "https://ieeexplore.ieee.org/document/10427969",
     tags: ["Neural Architecture Search", "Real-time AI", "Optimization"]
   },

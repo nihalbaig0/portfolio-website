@@ -52,10 +52,9 @@ const voluntaryExperience = [
     organization: "SUST CSE Carnival 2024",
     period: "2024",
     icon: Brain,
-    description: "Organized Bangladesh's first national deep learning competition focused on autonomous vehicle object detection for local road conditions.",
+    description: "Organized   Deep Learning competition focused on autonomous vehicle object detection for local road conditions.",
     achievements: [
       "Curated specialized dataset of Bangladeshi road scenarios",
-      "Coordinated with 100+ participants from multiple universities",
       "Managed evaluation pipeline for object detection models",
       "Secured industry sponsorships and professional judges"
     ]
@@ -68,7 +67,7 @@ const voluntaryExperience = [
     description: "Empowering students with technology skills through workshops and events. Organized 2 technical workshops and one community project.",
     achievements: [
       "Beta status achievement for community impact",
-      "Led Azure cloud computing workshops",
+      "Hosted Azure cloud Vision and Azure IOT  workshops",
       "Mentored students for Pre-Alpha stage"
     ]
   },
@@ -77,7 +76,7 @@ const voluntaryExperience = [
     organization: "University Robotics Club",
     period: "2023 - 2024",
     icon: Rocket,
-    description: "Led a team of 30 students in robotics projects and competitions. Managed budget and coordinated with faculty advisors.",
+    description: "Technical lead of the Robotics club managing technical projects and workshops.",
     achievements: [
       "Judge of Line Follower Robot Competition",
       "Responsible for Curriculum of Workshops and Technical Projects",
@@ -89,7 +88,7 @@ const voluntaryExperience = [
     organization: "Stanford University",
     period: "2023" ,
     icon: School,
-    description: "Teaching assistant for CS106A Programming Methodology. Conducted weekly sessions and provided one-on-one mentoring.",
+    description: "Section Leader for Code in Place. Conducted weekly sessions and provided one-on-one mentoring.",
     achievements: [
       "Mentored 10+ students from different countries",
     ]
