@@ -81,7 +81,7 @@ const certificationData = [
     issuer: "Udacity",
     date: "October 2023",
     credentialId: "TF-789012",
-    verificationUrl: "confirm.udacity.com/WCGKA2QD",
+    verificationUrl: "www.udacity.com/certificate/e/7ffed672-8d81-11eb-9714-5305ea9924c1",
     skills: [
       "Deep Learning",
       "Neural Networks",
