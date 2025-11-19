@@ -82,7 +82,7 @@ const Hero = () => {
                 Contact Me
               </a>
               <a 
-                href="/path-to-your-cv.pdf" 
+                href="https://drive.google.com/file/d/1XGPDkXLIPu6KrQ00J6Xkps8VVYZwA9oK/view?usp=sharing" 
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700 hover:border-blue-500 transition-all duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
