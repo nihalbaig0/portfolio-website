@@ -60,37 +60,37 @@ const Skills = () => {
       title: "Programming Languages",
       icon: Code,
       description: "Core languages for development",
-      skills: ["Python", "JavaScript", "TypeScript", "C++", "Java", "Go", "Rust", "SQL"]
+      skills: ["Python", "C++", "C", "JavaScript", "SQL"]
+    },
+    {
+      title: "ML/AI Frameworks",
+      icon: Brain,
+      description: "Machine learning technologies",
+      skills: ["PyTorch", "TensorFlow", "YOLOv8", "OpenCV", "Transformers", "LlamaIndex", "Qdrant"]
+    },
+    {
+      title: "MLOps & Tools",
+      icon: Cloud,
+      description: "ML operations and infrastructure",
+      skills: ["DVC", "MLflow", "Apache Airflow", "Weights & Biases", "AWS SageMaker", "Docker", "Kubernetes", "Git", "Streamlit", "Gradio"]
+    },
+    {
+      title: "Robotics",
+      icon: Layers,
+      description: "Robotics and autonomous systems",
+      skills: ["ROS2", "ROS", "Arduino", "Control Systems", "Kinematics"]
+    },
+    {
+      title: "DevOps",
+      icon: Terminal,
+      description: "Infrastructure and monitoring",
+      skills: ["Prometheus", "Grafana", "Pulumi", "Terraform", "OpenTelemetry"]
     },
     {
       title: "Web Technologies",
-      icon: Layers,
+      icon: Code,
       description: "Frontend & backend frameworks",
-      skills: ["React", "Next.js", "Node.js", "Express", "Django", "FastAPI", "GraphQL", "REST"]
-    },
-    {
-      title: "Machine Learning",
-      icon: Brain,
-      description: "AI & ML technologies",
-      skills: ["PyTorch", "TensorFlow", "Scikit-learn", "Keras", "OpenCV", "JAX", "Pandas", "NumPy"]
-    },
-    {
-      title: "DevOps & Cloud",
-      icon: Cloud,
-      description: "Infrastructure & deployment",
-      skills: ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD", "Terraform", "Linux", "Git"]
-    },
-    {
-      title: "Databases",
-      icon: Database,
-      description: "Data storage solutions",
-      skills: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "MySQL", "DynamoDB", "Neo4j", "Cassandra"]
-    },
-    {
-      title: "Tools & Others",
-      icon: Terminal,
-      description: "Development tools & utilities",
-      skills: ["VS Code", "Git", "Postman", "Jupyter", "Docker", "Jenkins", "Jira", "Figma"]
+      skills: ["React", "Node.js", "Express", "Django", "FastAPI", "REST", "GraphQL"]
     }
   ];
 

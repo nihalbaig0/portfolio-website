@@ -4,63 +4,53 @@ import { Trophy, Medal, Star, Sparkles, ExternalLink, Anchor, Car } from 'lucide
 const achievementData = [
   {
     id: 1,
-    title: "Best Paper Award",
-    event: "6th International Conference on Electrical Information and Communication Technology (EICT) 2023",
-    description: "Received the Best Paper Award for groundbreaking research in self-supervised learning techniques.",
+    title: "Prefinalist | Singapore AUV Challenge",
+    event: "Singapore AUV Challenge 2024",
+    description: "Advanced to the prefinal stage with the Orca AUV featuring vision-based navigation and control systems.",
     impact: "",
     icon: Trophy,
-    link: "https://drive.google.com/file/d/16Jtun8bnplcbE0rQOwZ_d5HId3FxejFY/view?usp=sharing",
-    category: "research"
+    link: "https://sauvc.org/",
+    category: "competition"
   },
   {
     id: 2,
-    title: "4th Position | DLSprint 2.0",
-    event: "Buet CSE Fest",
-    description: "Awarded $500,000 research grant for innovative work in computer vision applications.",
+    title: "Finalist | Hult Prize Campus Round",
+    event: "Hult Prize 2024",
+    description: "As part of Team Nebula Pulse, developed an IoT-based Pill Dispenser (MedPunctual) using Azure Computer Vision for pill detection and timely medication delivery.",
     impact: "",
     icon: Medal,
-    category: "grant",
-    link: "https://www.kaggle.com/competitions/dlsprint2/discussion/433389"
+    category: "competition",
+    link: "https://www.facebook.com/share/p/UwZaBEXCNwRDLWG3/"
   },
   {
     id: 3,
-    title: "Honourable Mention (Placed in the Top 8)",
+    title: "Honourable Mention (Top 8) | AI for Bangla 2.0",
     event: "AI for Bangla 2.0",
     description: "As part of Team SIGN_SUST, developed a complete pipeline for detecting Bengali Sign Language, encompassing the entire workflow from data annotation to deployment.",
     impact: "",
     icon: Star,
     category: "academic",
-    link: "https://drive.google.com/file/d/1Ygq_FRvmM-p80Pwry2p7xh5TmvmEmOuc/view?usp=sharing"
+    link: "https://drive.google.com/file/d/1Ygq_FRvmM-p80Pwry2p7xh5TmvmEmOuc/view"
   },
   {
     id: 4,
-    title: "Finalist at Hult Prize Campus Round (Top 5)",
-    event: "Hult Prize 2024",
-    description: "As part of Team Nebula Pulse, developed an IoT-based Pill Dispenser that ensures timely medication for elderly individuals and utilizes Azure Computer Vision to detect pills.",
+    title: "4th Position | DLSprint 2.0",
+    event: "BUET CSE Fest 2023",
+    description: "Achieved 4th position in the Deep Learning Sprint competition focused on Bengali Document Layout Analysis.",
     impact: "",
-    icon: Sparkles,
+    icon: Medal,
     category: "competition",
-    link: "https://www.facebook.com/share/p/UwZaBEXCNwRDLWG3/"
+    link: "https://www.kaggle.com/competitions/dlsprint2/discussion/433389"
   },
   {
     id: 5,
-    title: "Selected for SAUVC 2025",
-    event: "Singapore AUV Challenge 2025",
-    description: "Our team SUST_ONUSONDHAN was selected to compete in the prestigious international underwater robotics competition in Singapore, showcasing innovative autonomous underwater vehicle technology.",
+    title: "Best Paper Award",
+    event: "6th International Conference on Electrical Information and Communication Technology (EICT) 2023",
+    description: "Received the Best Paper Award for 'A SAR-Based Approach to Recognize Text in Syloti Nagri', addressing complex character shapes and enabling digitization of historical texts.",
     impact: "",
-    icon: Anchor,
-    category: "competition",
-    link: "https://sauvc.org/#teams"  // You can update this with the actual link
-  },
-  {
-    id: 6,
-    title: "Pre-seed Funding Recipient",
-    event: "University Innovation HUB Program",
-    description: "Secured pre-seed funding for the development of an Autonomous Car project, demonstrating innovative potential in autonomous vehicle technology.",
-    impact: "",
-    icon: Car,
-    category: "grant",
-    link: "https://web.facebook.com/story.php?story_fbid=122181036188119414&id=61553582439464&rdid=GeTs7HvlUw0G5qY8"  // You can update this with the actual link
+    icon: Trophy,
+    category: "research",
+    link: "https://www.researchgate.net/publication/378193712_A_SAR-Based_Approach_to_Recognize_Text_in_Syloti_Nagri"
   }
 ];
 

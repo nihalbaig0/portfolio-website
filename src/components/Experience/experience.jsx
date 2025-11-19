@@ -13,36 +13,44 @@ import {
 // Data
 const professionalExperience = [
   {
-    title: "Machine Learning Engineer & Researcher",
-    company: "Intelsense AI",
-    period: "2024 - Present",
-    description: "Working on Deploying ASR, LLM and Computer Vision Models.",
-    technologies: ["LLM", "Speech", "Computer Vision"],
+    title: "MLOps Engineer",
+    company: "Magicmind AI",
+    period: "Jun 2024 - Present",
+    description: "Building a microservice-based agentic product infrastructure using NATS and Redis Streams for distributed communication and real-time data flow. Developing CI/CD pipelines for scalable deployment and continuous monitoring of AI agents.",
+    technologies: ["NATS", "Redis Streams", "CI/CD", "Microservices", "Docker", "Kubernetes"],
     icon: Brain
   },
   {
-    title: "Deep Learning Engineer",
-    company: "Re:cruit",
-    period: "2024",
-    description: "Developed and deployed object detection model for real-time data processing pipeline on edge devices.",
-    technologies: ["Tensorflow", "Tflite", "Flutter", "Docker"],
+    title: "Machine Learning Engineer & Researcher",
+    company: "Rumman Arefin",
+    period: "Sep 2024 - Sep 2025",
+    description: "Designing and deploying production-ready AI models, developing scalable MLOps and data pipelines for Large Language Models (LLMs).",
+    technologies: ["LLM", "MLOps", "Data Pipelines", "Python"],
     icon: Code
   },
   {
-    title: "Robotics Engineer",
-    company: "Boltu Robotics",
-    period: "2021",
-    description: "Developed object detection models for autonomous vehicles, focusing on real-time accuracy and performance. Built and optimized an automated model training pipeline using AWS SageMaker, streamlining the process of training, evaluating, and deploying models at scale.",
-    technologies: ["Python", "AWS Sagemaker", "Jetson Xavier", "Pytorch"],
-    icon: Rocket
+    title: "Deep Learning Engineer",
+    company: "Antar Roy",
+    period: "Mar 2024 - Jun 2024",
+    description: "Developed and deployed real-time object detection models optimized for edge devices, improving performance and accuracy.",
+    technologies: ["YOLOv8", "PyTorch", "Edge Deployment", "OpenCV"],
+    icon: Code
   },
   {
-    title: "Research Assistant",
-    company: "Shahjalal University of Science and Technology",
-    period: "2022 - 2024",
-    description: "Worked as a Research Assistant with Professor Mohammad Shahidur Rahman at Shahjalal University of Science and Technology, focusing on research in Object Detection, Instance Segmentation, and Speech-to-Speech translation.",
-    technologies: ["Computer Vision", "ASR", "OCR", "LLM"],
+    title: "University Research Assistant",
+    company: "Mohammad Shahidur Rahman - SUST",
+    period: "Jun 2022 - Oct 2024",
+    description: "Conducted research in Object Detection, Instance Segmentation, and Speech-to-Speech Translation. Mentored students and contributed to the SUST CSE Archive of Research (SCAR).",
+    technologies: ["Computer Vision", "ASR", "OCR", "Python", "PyTorch"],
     icon: School
+  },
+  {
+    title: "Robotics Engineer",
+    company: "Maruf Abbasi",
+    period: "Apr 2021 - Jun 2021",
+    description: "Developed object detection models for autonomous vehicles and implemented automated training pipelines using AWS SageMaker.",
+    technologies: ["Python", "AWS SageMaker", "PyTorch", "Jetson Xavier"],
+    icon: Rocket
   }
 ];
 

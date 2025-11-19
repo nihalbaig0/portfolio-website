@@ -28,18 +28,15 @@ const publicationsData = [
       { name: "Radeen Mostafa", isMe: false },
       { name: "Mirza Nihal Baig", isMe: true },
       { name: "Mashaekh Tausif Ehsan", isMe: false },
-      { name: " Jakir Hasan", isMe: false }
+      { name: "Jakir Hasan", isMe: false }
     ],
-    venue: "NeuriPS Muslim in ML Workshop",
+    venue: "Proceedings of the Muslims in ML Workshop, NeurIPS 2024",
     year: "2024",
     type: "workshop",
-    abstract: "We present a new self-supervised learning framework that achieves state-of-the-art performance on various computer vision tasks while requiring significantly less computational resources.",
+    abstract: "Introduced G-RAG, a graph-based RAG system to improve retrieval accuracy and contextual understanding in Material Science documents.",
     citations: 0,
-    code: "https://github.com/username/project",
     paper: "https://openreview.net/forum?id=dQZ9zwWI64",
-    demo: "https://demo.project.com",
-    dataset: "https://dataset.project.com",
-    tags: ["Computer Vision", "Self-Supervised Learning", "Deep Learning"]
+    tags: ["RAG", "Material Science", "Graph-based Systems", "LLM"]
   },
   {
     id: 2,
@@ -49,30 +46,14 @@ const publicationsData = [
       { name: "Nowshin Alam Owishi", isMe: false },
       { name: "Mohammad Shahidur Rahman", isMe: false }
     ],
-    venue: "2023 6th International Conference on Electrical Information and Communication Technology (EICT)",
+    venue: "6th International Conference on Electrical Information and Communication Technology (EICT), 2023",
     year: "2023",
     type: "conference",
-    abstract: "This paper introduces a novel neural architecture search method that optimizes both model performance and inference time, making it particularly suitable for real-time applications.",
-    citations: 78,
-    code: "https://github.com/username/nas-project",
-    paper: "https://ieeexplore.ieee.org/document/10427969",
-    tags: ["Neural Architecture Search", "Real-time AI", "Optimization"]
+    abstract: "Developed a SAR-based OCR system for Sylheti Nagri script, addressing complex character shapes and enabling digitization of historical texts.",
+    citations: 0,
+    paper: "https://www.researchgate.net/publication/378193712_A_SAR-Based_Approach_to_Recognize_Text_in_Syloti_Nagri",
+    tags: ["OCR", "Bengali Script", "Computer Vision", "NLP"]
   },
-  // {
-  //   id: 3,
-  //   title: "Improving Robustness in Deep Learning Models",
-  //   authors: [
-  //     { name: "Alice Anderson", isMe: false },
-  //     { name: "John Doe", isMe: true }
-  //   ],
-  //   venue: "IEEE Transactions on Pattern Analysis and Machine Intelligence",
-  //   year: "2023",
-  //   type: "journal",
-  //   abstract: "We propose a new training methodology that significantly improves the robustness of deep learning models against adversarial attacks while maintaining high accuracy on clean data.",
-  //   citations: 92,
-  //   paper: "https://doi.org/xxx.xxxx",
-  //   tags: ["Adversarial Learning", "Model Robustness", "Deep Learning"]
-  // }
 ];
 
 const PublicationLinks = ({ publication }) => {

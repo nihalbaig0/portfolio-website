@@ -4,114 +4,92 @@ import { Github, ExternalLink, Terminal, Brain, Globe, Rocket, Youtube } from 'l
 const projects = [
   {
     id: 1,
-    title: "Pointer Visualizer",
-    description: "A merge of Online Judge and Algorithm Visualizer to help beginners learn algorithms interactively.",
+    title: "MedPunctual",
+    description: "Smart pillbox and health monitoring system using Azure Computer Vision and Azure IoT, enabling timely medication, vital signs tracking, and remote doctor monitoring.",
     image: "/api/placeholder/600/400",
-    category: "web",
-    technologies: ["React", "JavaScript", "Data Structures"],
+    category: "ml",
+    technologies: ["Python", "Azure Computer Vision", "Azure IoT", "Embedded Systems"],
     links: {
-      github: "#",
-      demo: "#"
+      github: "https://github.com/nihalbaig0/MED-Punctual"
     }
   },
   {
     id: 2,
-    title: "Hotel Booking App",
-    description: "Web application for hotel room bookings with user accounts and admin management features.",
+    title: "BD Vehicle Detection",
+    description: "Web app for detecting Bangladeshi road vehicles using YOLOv8, Gradio, and PyTorch for real-time inference.",
     image: "/api/placeholder/600/400",
-    category: "web",
-    technologies: ["PostgreSQL", "React", "Node.js"],
+    category: "ml",
+    technologies: ["Python", "YOLOv8", "PyTorch", "Gradio", "OpenCV"],
     links: {
-      github: "#"
+      github: "https://huggingface.co/spaces/nihalbaig0/BD-Vehicle-Detection",
+      demo: "https://huggingface.co/spaces/nihalbaig0/BD-Vehicle-Detection"
     }
   },
   {
     id: 3,
-    title: "Dynamic LFR Simulator",
-    description: "Desktop application for simulating Line Follower Robot with custom track drawing capabilities.",
+    title: "Orca: Underwater Autonomous Vehicle",
+    description: "Built an autonomous underwater vehicle for the SAUVC competition, integrating vision-based navigation and control systems using ROS.",
     image: "/api/placeholder/600/400",
     category: "robotics",
-    technologies: ["Python", "OpenCV", "Robotics"],
+    technologies: ["Python", "ROS", "OpenCV", "Arduino", "C++"],
     links: {
-      github: "#"
+      github: "https://github.com/nihalbaig0/orca"
     }
   },
   {
     id: 4,
-    title: "Marine Debris Detector",
-    description: "Deep Learning web app for detecting marine debris with customizable YOLO-R parameters and statistics dashboard.",
+    title: "RunAgent",
+    description: "Agentic ecosystem that allows developers to build Python AI agents with frameworks like LangGraph, CrewAI, Letta, and LlamaIndex, and access them from any language with stateful self-learning capabilities. (300+ GitHub Stars)",
     image: "/api/placeholder/600/400",
     category: "ml",
-    technologies: ["PyTorch", "YOLO-R", "Computer Vision"],
+    technologies: ["Python", "LangGraph", "CrewAI", "Letta", "LlamaIndex"],
     links: {
-      github: "#"
+      github: "https://github.com/runagent-dev/runagent"
     }
   },
   {
     id: 5,
-    title: "Tello Drone",
-    description: "Autonomous face-detecting drone that follows people using computer vision.",
+    title: "Hotel Booking Frontend",
+    description: "Developed a responsive web frontend for hotel booking, featuring dynamic search, filtering, and booking interfaces for users.",
     image: "/api/placeholder/600/400",
-    category: "robotics",
-    technologies: ["OpenCV", "Python", "Drone Control"],
+    category: "web",
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
     links: {
-      github: "#"
+      github: "https://github.com/nihalbaig0/Hotel-Booking-Frontend"
     }
   },
   {
     id: 6,
     title: "Bangla Document Layout Segmentation",
-    description: "LayoutLM-based approach for segmenting layouts in Bengali documents.",
+    description: "Developed a LayoutLM-based approach for segmenting layouts from Bengali documents, including text, paragraphs, images, and tables.",
     image: "/api/placeholder/600/400",
     category: "ml",
-    technologies: ["LayoutLM", "PyTorch", "NLP"],
+    technologies: ["Python", "PyTorch", "LayoutLM", "OpenCV"],
     links: {
-      github: "#"
+      github: "https://github.com/nihalbaig0/Badlad"
     }
   },
   {
     id: 7,
-    title: "KrishiBot",
-    description: "Autonomous farming robot using Lidar for navigation and fruit harvesting in Gazebo simulation.",
+    title: "Marine Debris Detector",
+    description: "Deep learning-based web app to detect marine debris from videos and images, allowing customization of YOLO-R model parameters and dashboard statistics.",
     image: "/api/placeholder/600/400",
-    category: "robotics",
-    technologies: ["ROS", "Gazebo", "MoveIt"],
+    category: "ml",
+    technologies: ["Python", "YOLO-R", "Streamlit", "OpenCV"],
     links: {
-      github: "#"
+      github: "https://github.com/nihalbaig0/Marine-Debris-Tracker"
     }
   },
   {
     id: 8,
-    title: "Smile Door",
-    description: "Interactive door system using Raspberry Pi for smile detection and Arduino for control.",
+    title: "AutoMama: First Bangladeshi Autonomous Robot",
+    description: "First Bangladeshi autonomous vehicle achieving Level 2 autonomy, developed by the SUST Synerbotics team.",
     image: "/api/placeholder/600/400",
     category: "robotics",
-    technologies: ["Raspberry Pi", "Arduino", "OpenCV"],
+    technologies: ["Python", "ROS", "OpenCV", "Arduino", "C++"],
     links: {
-      github: "#"
-    }
-  },
-  {
-    id: 9,
-    title: "AutoMama",
-    description: "First Bangladeshi autonomous vehicle with perception and control systems.",
-    image: "/api/placeholder/600/400",
-    category: "robotics",
-    technologies: ["OpenCV", "Arduino", "Control Systems"],
-    links: {
-      github: "#"
-    }
-  },
-  {
-    id: 10,
-    title: "Alpaca Bangla Dataset Finetune",
-    description: "Translated and cleaned Alpaca dataset for Bangla language model training using Unsloth.",
-    image: "/api/placeholder/600/400",
-    category: "ml",
-    technologies: ["Argilla", "Unsloth", "NLP"],
-    links: {
-      github: "#",
-      youtube: "#"
+      github: "https://www.youtube.com/watch?v=2jCTuZDS7PI",
+      youtube: "https://www.youtube.com/watch?v=2jCTuZDS7PI"
     }
   }
 ];

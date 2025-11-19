@@ -13,6 +13,8 @@ import BlogPosts from './components/Blog/blog';
 import Hero from './components/Hero/hero';
 import Featured from './components/Featured/featured';
 import Contact from './components/Contact/contact';
+import LanguagesSection from './components/Languages/languages';
+import LeadershipSection from './components/Leadership/leadership';
 
 const Portfolio = () => {
 
@@ -47,19 +49,25 @@ const Portfolio = () => {
         {/* Publication Section */}
         <Publications />
 
-        {/* Certifications Section */}
-        <Certifications />
-        
-        {/* Blogs Section */}
-        <BlogPosts />
+       {/* Certifications Section */}
+         <Certifications />
 
-        {/* Workshop Section */}
-        <WorkshopsAndTalks />
+         {/* Languages Section */}
+         <LanguagesSection />
 
-      {/* Workshop Section */}
-       <Featured />
+         {/* Leadership Section */}
+         <LeadershipSection />
+         
+         {/* Blogs Section */}
+         <BlogPosts />
 
-        <Contact />
+         {/* Workshop Section */}
+         <WorkshopsAndTalks />
+
+       {/* Featured Section */}
+        <Featured />
+
+         <Contact />
 
 
      

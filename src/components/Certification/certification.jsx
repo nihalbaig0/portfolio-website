@@ -62,14 +62,14 @@ const CertificationCard = ({ certification }) => {
 const certificationData = [
   {
     id: 1,
-    name: "Azure Fundamentals (AZ-900)",
+    name: "Microsoft Certified: Azure Fundamentals",
     issuer: "Microsoft",
-    date: "December 2023",
-    credentialId: "AWS-123456",
+    date: "2023",
+    credentialId: "56b05652-62c2-42d3-90b1-17e77f3cb19f",
     verificationUrl: "https://www.credly.com/badges/56b05652-62c2-42d3-90b1-17e77f3cb19f?source=linked_in_profile",
     skills: [
+      "Azure Services",
       "Cloud Architecture",
-      "AWS Services",
       "System Design",
       "Security",
       "Cost Optimization"
@@ -77,47 +77,47 @@ const certificationData = [
   },
   {
     id: 2,
-    name: "AI Product Manager (NanoDegree)",
-    issuer: "Udacity",
-    date: "October 2023",
-    credentialId: "TF-789012",
-    verificationUrl: "confirm.udacity.com/WCGKA2QD",
+    name: "NVIDIA: Fundamentals of Deep Learning (DLI Workshop)",
+    issuer: "NVIDIA",
+    date: "2023",
+    credentialId: "eec5ed44eaf642aca886ed0edc5956cd",
+    verificationUrl: "https://learn.nvidia.com/certificates?id=eec5ed44eaf642aca886ed0edc5956cd",
     skills: [
       "Deep Learning",
       "Neural Networks",
-      "Computer Vision",
-      "TensorFlow",
-      "Model Deployment"
+      "GPU Computing",
+      "Optimization",
+      "Machine Learning"
     ]
   },
   {
     id: 3,
-    name: "Fundamentals of Deep Learning - Nvidia DLI Workshop",
-    issuer: "Nvidia",
-    date: "August 2023",
-    credentialId: "AZ-345678",
-    verificationUrl: "https://courses.nvidia.com/certificates/eec5ed44eaf642aca886ed0edc5956cd",
+    name: "Linux Foundation: Kubernetes Fundamentals (LFS258)",
+    issuer: "The Linux Foundation",
+    date: "2023",
+    credentialId: "mirza-nihal-baig-f9f59e1b-a2dd-4002-901c-77c102a04245",
+    verificationUrl: "https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/7657fb91-0388-4685-9725-69f405868ea0-mirza-nihal-baig-f9f59e1b-a2dd-4002-901c-77c102a04245-certificate.pdf",
     skills: [
-      "Azure ML",
-      "Cognitive Services",
-      "AI Solutions",
-      "MLOps",
-      "Natural Language Processing"
+      "Kubernetes",
+      "Container Orchestration",
+      "DevOps",
+      "Infrastructure",
+      "Deployment"
     ]
   },
   {
     id: 4,
-    name: "Kubernetes Fundamentals (LFS258)",
-    issuer: "The Linux Foundation",
-    date: "July 2023",
-    credentialId: "DL-901234",
-    verificationUrl: "https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/7657fb91-0388-4685-9725-69f405868ea0-mirza-nihal-baig-f9f59e1b-a2dd-4002-901c-77c102a04245-certificate.pdf",
+    name: "Udacity: AI Product Manager Nanodegree",
+    issuer: "Udacity",
+    date: "2021",
+    credentialId: "e7ffed672-8d81-11eb-9714-5305ea9924c1",
+    verificationUrl: "https://www.udacity.com/certificate/e/7ffed672-8d81-11eb-9714-5305ea9924c1",
     skills: [
-      "CNN",
-      "RNN",
-      "Sequence Models",
-      "Optimization",
-      "Machine Learning"
+      "AI Strategy",
+      "Product Management",
+      "Deep Learning",
+      "Computer Vision",
+      "Model Deployment"
     ]
   }
 ];
