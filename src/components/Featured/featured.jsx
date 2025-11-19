@@ -20,7 +20,7 @@ const featuredContent = {
       title: "First Autonomous Car Development Breakthrough",
       excerpt: "A groundbreaking achievement in autonomous vehicle technology marks a significant milestone in Bangladesh's tech innovation landscape.",
       date: "2024",
-      image: "/api/placeholder/400/400",
+      image: "https://images.prothomalo.com/prothomalo-bangla%2F2024-10-27%2F2lw95umg%2FIMG20241018154228977.jpg?rect=87%2C0%2C810%2C540&auto=format%2Ccompress&fmt=webp&format=webp&w=640&dpr=1.0",
       url: "https://www.prothomalo.com/lifestyle/je3nc91c98",
       likes: "3.2K",
       comments: "245",
