@@ -114,7 +114,10 @@ const ContactForm = () => {
 
       if (!response.ok) {
         const data = await response.json().catch(() => ({}));
-        throw new Error(data?.error || 'Could not send message right now.');
+        const parts = [data?.error, data?.details].filter(Boolean);
+        throw new Error(
+          parts.length ? parts.join(' — ') : 'Could not send message right now.'
+        );
       }
 
       setFormData({ name: '', email: '', message: '' });
