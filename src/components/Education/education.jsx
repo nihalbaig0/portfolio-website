@@ -6,7 +6,7 @@ const EducationSection = () => {
     school: "Shahjalal University of Science and Technology",
     degree: "B.Sc. in Computer Science and Engineering",
     location: "Sylhet, Bangladesh",
-    period: "Jan 2019 - Dec 2022",
+    period: "Jan 2019 - June 2024",
     gpa: "3.37/4.00",
     thesis: "BDRS: Bangladeshi Road Segmentation Dataset",
   };

@@ -177,7 +177,7 @@ const PublicationCard = ({ publication }) => {
 };
 
 const Publications = () => {
-  const totalCitations = publicationsData.reduce((sum, pub) => sum + pub.citations, 0);
+  const totalCitations = 9;
   const totalPublications = publicationsData.length;
 
   return (
