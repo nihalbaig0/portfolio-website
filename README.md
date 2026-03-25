@@ -1,8 +1,21 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is built with React + Vite and deployed on Cloudflare Pages.
 
-Currently, two official plugins are available:
+## Contact form (Cloudflare Pages Functions)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The contact form posts to `POST /api/contact`, implemented in:
+
+- `functions/api/contact.js`
+
+It uses the Resend API to deliver email.
+
+### Required Cloudflare Pages environment variables
+
+Set these in Cloudflare Pages -> Settings -> Environment variables:
+
+- `RESEND_API_KEY` - your Resend API key
+- `RESEND_FROM_EMAIL` - a verified sender address in Resend (example: `Portfolio <noreply@yourdomain.com>`)
+- `CONTACT_TO_EMAIL` - where contact form messages should be delivered
+
+After setting env vars, redeploy your Pages project.

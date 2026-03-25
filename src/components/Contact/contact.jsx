@@ -91,6 +91,7 @@ const ContactForm = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState({ type: '', message: '' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -100,13 +101,35 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
+    setStatus({ type: '', message: '' });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data?.error || 'Could not send message right now.');
+      }
+
+      setFormData({ name: '', email: '', message: '' });
+      setStatus({
+        type: 'success',
+        message: 'Message sent successfully. I will get back to you soon.',
+      });
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: error.message || 'Something went wrong while sending your message.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -150,6 +173,16 @@ const ContactForm = () => {
           <Send className="w-5 h-5" />
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
+
+        {status.message ? (
+          <p
+            className={`text-sm ${
+              status.type === 'success' ? 'text-green-400' : 'text-red-400'
+            }`}
+          >
+            {status.message}
+          </p>
+        ) : null}
       </form>
     </div>
   );
