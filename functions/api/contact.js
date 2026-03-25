@@ -1,5 +1,25 @@
 const RESEND_URL = "https://api.resend.com/emails";
 
+function cleanEnvValue(value) {
+  if (value == null) return "";
+  let s = String(value).trim();
+  if (
+    (s.startsWith('"') && s.endsWith('"')) ||
+    (s.startsWith("'") && s.endsWith("'"))
+  ) {
+    s = s.slice(1, -1).trim();
+  }
+  return s;
+}
+
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 function corsHeaders(request) {
   const origin = request.headers.get("Origin") || "*";
   return {
@@ -49,9 +69,9 @@ export async function onRequestPost(context) {
       return jsonResponse(request, { error: "Input exceeds allowed length." }, 400);
     }
 
-    const apiKey = (env.RESEND_API_KEY || "").trim();
-    const from = (env.RESEND_FROM_EMAIL || "").trim();
-    const to = (env.CONTACT_TO_EMAIL || "").trim();
+    const apiKey = cleanEnvValue(env.RESEND_API_KEY);
+    const from = cleanEnvValue(env.RESEND_FROM_EMAIL);
+    const to = cleanEnvValue(env.CONTACT_TO_EMAIL);
 
     if (!apiKey || !from || !to) {
       return jsonResponse(
@@ -64,6 +84,14 @@ export async function onRequestPost(context) {
       );
     }
 
+    const textBody = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    const htmlBody = `
+<p><strong>Name:</strong> ${escapeHtml(name)}</p>
+<p><strong>Email:</strong> ${escapeHtml(email)}</p>
+<p><strong>Message:</strong></p>
+<p>${escapeHtml(message).replace(/\n/g, "<br/>")}</p>
+`.trim();
+
     const resendResponse = await fetch(RESEND_URL, {
       method: "POST",
       headers: {
@@ -74,8 +102,9 @@ export async function onRequestPost(context) {
         from,
         to: [to],
         subject: `Portfolio Contact: ${name}`,
-        reply_to: [email],
-        text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+        reply_to: email,
+        text: textBody,
+        html: htmlBody,
       }),
     });
 
@@ -87,7 +116,8 @@ export async function onRequestPost(context) {
       details =
         parsed.message ||
         parsed.error?.message ||
-        (Array.isArray(parsed.errors) && parsed.errors.map((e) => e.message).filter(Boolean).join(" ")) ||
+        (Array.isArray(parsed.errors) &&
+          parsed.errors.map((e) => e.message).filter(Boolean).join(" ")) ||
         rawText;
     } catch {
       // keep rawText
@@ -101,6 +131,7 @@ export async function onRequestPost(context) {
           error:
             "Email could not be sent. Check Resend: verified `from` domain, API key, and recipient.",
           details,
+          resendStatus: resendResponse.status,
         },
         clientStatus
       );

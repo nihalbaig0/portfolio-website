@@ -114,7 +114,11 @@ const ContactForm = () => {
 
       if (!response.ok) {
         const data = await response.json().catch(() => ({}));
-        const parts = [data?.error, data?.details].filter(Boolean);
+        const parts = [
+          data?.error,
+          data?.details,
+          data?.resendStatus != null ? `(Resend HTTP ${data.resendStatus})` : null,
+        ].filter(Boolean);
         throw new Error(
           parts.length ? parts.join(' — ') : 'Could not send message right now.'
         );
