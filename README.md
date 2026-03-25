@@ -15,7 +15,7 @@ It uses the Resend API to deliver email.
 Set these in Cloudflare Pages -> Settings -> Environment variables:
 
 - `RESEND_API_KEY` - your Resend API key
-- `RESEND_FROM_EMAIL` - a verified sender address in Resend (example: `Portfolio <noreply@yourdomain.com>`)
+- `RESEND_FROM_EMAIL` - a verified sender address in Resend (example: `Portfolio <noreply@yourdomain.com>`). Paste as **one line** (no accidental line breaks). Either `email@domain.com` or `Display Name <email@domain.com>` with straight angle brackets `<` `>`.
 
 **Subdomain vs root domain:** Resend verifies **one hostname at a time**. If the dashboard shows **contact.nihalbaig.com** as verified (not `nihalbaig.com`), then `RESEND_FROM_EMAIL` **must** use that host, e.g. `Portfolio <noreply@contact.nihalbaig.com>`. A `from` address like `you@nihalbaig.com` will be rejected until you verify the root domain separately or change `from` to the verified subdomain.
 - `CONTACT_TO_EMAIL` - where contact form messages should be delivered

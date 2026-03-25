@@ -12,6 +12,36 @@ function cleanEnvValue(value) {
   return s;
 }
 
+/** Resend only accepts `email@x.com` or `Name <email@x.com>`. Normalizes Cloudflare env quirks (newlines, smart brackets, missing <>). */
+function normalizeResendFrom(raw) {
+  let s = cleanEnvValue(raw);
+  if (!s) return "";
+
+  s = s.replace(/[\u200B-\u200D\uFEFF]/g, "");
+  s = s.replace(/\s+/g, " ").trim();
+  s = s.replace(/&lt;/gi, "<").replace(/&gt;/gi, ">");
+
+  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (emailRe.test(s)) return s;
+
+  const named = s.match(/^(.+?)\s*<\s*([^>]+?)\s*>\s*$/);
+  if (named) {
+    const name = named[1].trim();
+    const addr = named[2].trim();
+    if (name && emailRe.test(addr)) return `${name} <${addr}>`;
+  }
+
+  const loose = s.match(/^(.+?)\s+([^\s@]+@[^\s@]+\.[^\s@]+)$/);
+  if (loose) {
+    const name = loose[1].trim();
+    const addr = loose[2].trim();
+    if (name && emailRe.test(addr)) return `${name} <${addr}>`;
+  }
+
+  return "";
+}
+
 function escapeHtml(text) {
   return String(text)
     .replace(/&/g, "&amp;")
@@ -70,15 +100,26 @@ export async function onRequestPost(context) {
     }
 
     const apiKey = cleanEnvValue(env.RESEND_API_KEY);
-    const from = cleanEnvValue(env.RESEND_FROM_EMAIL);
+    const from = normalizeResendFrom(env.RESEND_FROM_EMAIL);
     const to = cleanEnvValue(env.CONTACT_TO_EMAIL);
 
-    if (!apiKey || !from || !to) {
+    if (!apiKey || !to) {
       return jsonResponse(
         request,
         {
           error:
             "Server email env vars are not configured. Set RESEND_API_KEY, RESEND_FROM_EMAIL, and CONTACT_TO_EMAIL in Cloudflare Pages.",
+        },
+        500
+      );
+    }
+
+    if (!from) {
+      return jsonResponse(
+        request,
+        {
+          error:
+            "RESEND_FROM_EMAIL is missing or not in a valid format. Use either noreply@contact.nihalbaig.com or Portfolio <noreply@contact.nihalbaig.com> (no line breaks; angle brackets around the address).",
         },
         500
       );
