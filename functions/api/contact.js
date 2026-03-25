@@ -113,24 +113,30 @@ export async function onRequestPost(context) {
 
     try {
       const parsed = JSON.parse(rawText);
-      details =
-        parsed.message ||
-        parsed.error?.message ||
-        (Array.isArray(parsed.errors) &&
-          parsed.errors.map((e) => e.message).filter(Boolean).join(" ")) ||
-        rawText;
+      const parts = [
+        parsed.name,
+        parsed.message,
+        parsed.error?.message,
+        Array.isArray(parsed.errors)
+          ? parsed.errors.map((e) => e.message).filter(Boolean).join(" ")
+          : null,
+      ].filter(Boolean);
+      details = parts.length ? parts.join(" — ") : rawText;
     } catch {
       // keep rawText
     }
 
     if (!resendResponse.ok) {
       const clientStatus = resendResponse.status >= 500 ? 502 : 400;
+      const subdomainHint =
+        "If Resend shows only a subdomain as verified (e.g. contact.nihalbaig.com), set RESEND_FROM_EMAIL to an address on that exact host, such as Portfolio <noreply@contact.nihalbaig.com>. Using @nihalbaig.com will fail unless the root domain is verified separately in Resend.";
       return jsonResponse(
         request,
         {
           error:
-            "Email could not be sent. Check Resend: verified `from` domain, API key, and recipient.",
+            "Email could not be sent. Check Resend: `from` must match a verified domain, API key, and recipient.",
           details,
+          hint: subdomainHint,
           resendStatus: resendResponse.status,
         },
         clientStatus

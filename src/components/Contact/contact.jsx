@@ -117,6 +117,7 @@ const ContactForm = () => {
         const parts = [
           data?.error,
           data?.details,
+          data?.hint,
           data?.resendStatus != null ? `(Resend HTTP ${data.resendStatus})` : null,
         ].filter(Boolean);
         throw new Error(
