@@ -4,11 +4,12 @@ import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
 const ContactInfo = () => {
   const contactDetails = {
     email: "nihalmd1@gmail.com",
-    phone: "",
+    phoneDisplay: "+880-1854794578",
+    phoneHref: "+8801854794578",
     location: "Dhaka, Bangladesh",
     socials: [
-      { icon: Github, link: "#", label: "GitHub" },
-      { icon: Linkedin, link: "#", label: "LinkedIn" }
+      { icon: Github, link: "https://github.com/nihalbaig0", label: "GitHub" },
+      { icon: Linkedin, link: "https://www.linkedin.com/in/mirza-nihal-baig-0361971a0/", label: "LinkedIn" }
     ]
   };
 
@@ -32,8 +33,8 @@ const ContactInfo = () => {
         <ContactItem
           icon={Phone}
           label="Phone"
-          value={contactDetails.phone}
-          href={`tel:${contactDetails.phone}`}
+          value={contactDetails.phoneDisplay}
+          href={`tel:${contactDetails.phoneHref}`}
         />
         
         <ContactItem

@@ -4,43 +4,9 @@ import { Github, ExternalLink, Terminal, Brain, Globe, Rocket, Youtube } from 'l
 const projects = [
   {
     id: 1,
-    title: "MedPunctual",
-    description: "Smart pillbox and health monitoring system using Azure Computer Vision and Azure IoT, enabling timely medication, vital signs tracking, and remote doctor monitoring.",
-    image: "/api/placeholder/600/400",
-    category: "ml",
-    technologies: ["Python", "Azure Computer Vision", "Azure IoT", "Embedded Systems"],
-    links: {
-      github: "https://github.com/nihalbaig0/MED-Punctual"
-    }
-  },
-  {
-    id: 2,
-    title: "BD Vehicle Detection",
-    description: "Web app for detecting Bangladeshi road vehicles using YOLOv8, Gradio, and PyTorch for real-time inference.",
-    image: "/api/placeholder/600/400",
-    category: "ml",
-    technologies: ["Python", "YOLOv8", "PyTorch", "Gradio", "OpenCV"],
-    links: {
-      github: "https://huggingface.co/spaces/nihalbaig0/BD-Vehicle-Detection",
-      demo: "https://huggingface.co/spaces/nihalbaig0/BD-Vehicle-Detection"
-    }
-  },
-  {
-    id: 3,
-    title: "Orca: Underwater Autonomous Vehicle",
-    description: "Built an autonomous underwater vehicle for the SAUVC competition, integrating vision-based navigation and control systems using ROS.",
-    image: "/api/placeholder/600/400",
-    category: "robotics",
-    technologies: ["Python", "ROS", "OpenCV", "Arduino", "C++"],
-    links: {
-      github: "https://github.com/nihalbaig0/orca"
-    }
-  },
-  {
-    id: 4,
     title: "RunAgent",
     description: "Agentic ecosystem that allows developers to build Python AI agents with frameworks like LangGraph, CrewAI, Letta, and LlamaIndex, and access them from any language with stateful self-learning capabilities. (300+ GitHub Stars)",
-    image: "/api/placeholder/600/400",
+    image: "https://images.unsplash.com/photo-1667372459567-3853510dd5ce?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "ml",
     technologies: ["Python", "LangGraph", "CrewAI", "Letta", "LlamaIndex"],
     links: {
@@ -48,21 +14,65 @@ const projects = [
     }
   },
   {
-    id: 5,
-    title: "Hotel Booking Frontend",
-    description: "Developed a responsive web frontend for hotel booking, featuring dynamic search, filtering, and booking interfaces for users.",
-    image: "/api/placeholder/600/400",
-    category: "web",
-    technologies: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
+    id: 2,
+    title: "Infrastructure Automation Engineer -- K3s on AWS",
+    description: "Designed and automated a production-grade Kubernetes (k3s) cluster deployment on AWS using Pulumi (Infrastructure as Code), Ansible (configuration management), and GitHub Actions (CI/CD). Implemented a secure VPC architecture with public/private subnets and a self-hosted runner for automated node provisioning.",
+    image: "https://images.unsplash.com/photo-1667372459567-3853510dd5ce?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "ml",
+    technologies: ["K3s", "AWS", "Pulumi", "Ansible", "GitHub Actions", "Docker", "VPC"],
     links: {
-      github: "https://github.com/nihalbaig0/Hotel-Booking-Frontend"
+      github: "https://github.com/nihalbaig0/Infrastructure-Automation-Engineer-K3s-on-AWS.git"
+    }
+  },
+  {
+    id: 3,
+    title: "Weather Data Pipeline",
+    description: "Built an end-to-end data pipeline using Apache Airflow, dbt, PostgreSQL, and Apache Superset to ingest live weather data from the Weatherstack API, transform it through staging and mart layers, and visualize trends on interactive dashboards, fully orchestrated via Docker Compose.",
+    image: "https://images.unsplash.com/photo-1750163564812-c4b49e2788ec?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "ml",
+    technologies: ["Apache Airflow", "dbt", "PostgreSQL", "Apache Superset", "Docker Compose", "Weatherstack API"],
+    links: {
+      github: "https://github.com/nihalbaig0/weather-data-pipeline"
+    }
+  },
+  {
+    id: 4,
+    title: "Unisense",
+    description: "Worked on deploying ASR and TTS models for Unisense (a sales voice agent), as part of Intelsense AI work. Reduced latency 3X by using Traefik as a load balancer and added streaming support. Used a fine-tuned Whisper model for ASR and XTTS as TTS.",
+    image: "https://images.unsplash.com/photo-1643652631396-181154ca7d8a?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "ml",
+    technologies: ["Whisper", "FastAPI", "Traefik", "Redis"],
+    links: {
+      github: ""
+    }
+  },
+  {
+    id: 5,
+    title: "MedPunctual",
+    description: "Smart pillbox and health monitoring system using Azure Computer Vision and Azure IoT, enabling timely medication, vital signs tracking, and remote doctor monitoring.",
+    image: "https://images.unsplash.com/photo-1758691462743-f9fc9e430d39?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "ml",
+    technologies: ["Python", "Azure Computer Vision", "Azure IoT", "Embedded Systems"],
+    links: {
+      github: "https://github.com/nihalbaig0/MED-Punctual"
     }
   },
   {
     id: 6,
+    title: "Orca: Underwater Autonomous Vehicle",
+    description: "Built an autonomous underwater vehicle for the SAUVC competition, integrating vision-based navigation and control systems using ROS.",
+    image: "https://images.unsplash.com/photo-1742353980377-b8e42932c590?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "robotics",
+    technologies: ["Python", "ROS", "OpenCV", "Arduino", "C++"],
+    links: {
+      youtube: "https://youtu.be/uTWk7Z62jHs"
+    }
+  },
+  {
+    id: 7,
     title: "Bangla Document Layout Segmentation",
     description: "Developed a LayoutLM-based approach for segmenting layouts from Bengali documents, including text, paragraphs, images, and tables.",
-    image: "/api/placeholder/600/400",
+    image: "https://images.unsplash.com/photo-1591453089816-0fbb971b454c?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "ml",
     technologies: ["Python", "PyTorch", "LayoutLM", "OpenCV"],
     links: {
@@ -70,10 +80,10 @@ const projects = [
     }
   },
   {
-    id: 7,
+    id: 8,
     title: "Marine Debris Detector",
     description: "Deep learning-based web app to detect marine debris from videos and images, allowing customization of YOLO-R model parameters and dashboard statistics.",
-    image: "/api/placeholder/600/400",
+    image: "https://images.unsplash.com/photo-1759240168026-70f691bd0707?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "ml",
     technologies: ["Python", "YOLO-R", "Streamlit", "OpenCV"],
     links: {
@@ -81,14 +91,24 @@ const projects = [
     }
   },
   {
-    id: 8,
+    id: 9,
+    title: "Hotel Booking Frontend",
+    description: "Developed a responsive web frontend for hotel booking, featuring dynamic search, filtering, and booking interfaces for users.",
+    image: "https://images.unsplash.com/photo-1759038085950-1234ca8f5fed?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "web",
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
+    links: {
+      github: "https://github.com/nihalbaig0/Hotel-Booking-Frontend"
+    }
+  },
+  {
+    id: 10,
     title: "AutoMama: First Bangladeshi Autonomous Robot",
     description: "First Bangladeshi autonomous vehicle achieving Level 2 autonomy, developed by the SUST Synerbotics team.",
-    image: "/api/placeholder/600/400",
+    image: "https://images.unsplash.com/photo-1584847641814-6530edfab791?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "robotics",
     technologies: ["Python", "ROS", "OpenCV", "Arduino", "C++"],
     links: {
-      github: "https://www.youtube.com/watch?v=2jCTuZDS7PI",
       youtube: "https://www.youtube.com/watch?v=2jCTuZDS7PI"
     }
   }

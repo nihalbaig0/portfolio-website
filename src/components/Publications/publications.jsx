@@ -23,6 +23,36 @@ const PUBLICATION_TYPES = {
 const publicationsData = [
   {
     id: 1,
+    title: "A Scalable Modular Architecture for Multimodal Control of an Electric Vehicle Platform",
+    authors: [
+      { name: "Baig, M. N.", isMe: true },
+      { name: "et al.", isMe: false }
+    ],
+    venue: "2026 5th International Conference on Electrical, Computer & Telecommunication Engineering (ICECTE)",
+    year: "2026",
+    type: "conference",
+    abstract: "Presents a scalable modular architecture enabling multimodal control integration for electric vehicle platforms.",
+    citations: 0,
+    paper: "https://ieeexplore.ieee.org/document/11429293/",
+    tags: ["Multimodal Control", "Electric Vehicle", "Modular Architecture", "Systems Engineering"]
+  },
+  {
+    id: 2,
+    title: "A Scalable Multi-Thruster ROV Platform With Modular Sensing and Low-Latency Control for Underwater Surveillance",
+    authors: [
+      { name: "Baig, M. N.", isMe: true },
+      { name: "et al.", isMe: false }
+    ],
+    venue: "2026 5th International Conference on Electrical, Computer & Telecommunication Engineering (ICECTE)",
+    year: "2026",
+    type: "conference",
+    abstract: "Introduces a scalable ROV platform featuring multi-thruster design, modular sensing, and low-latency control systems for underwater surveillance applications.",
+    citations: 0,
+    paper: "https://ieeexplore.ieee.org/document/11429321/",
+    tags: ["ROV", "Underwater Surveillance", "Low-Latency Control", "Modular Sensing"]
+  },
+  {
+    id: 3,
     title: "G-RAG: Knowledge Expansion in Material Science",
     authors: [
       { name: "Radeen Mostafa", isMe: false },
@@ -39,7 +69,7 @@ const publicationsData = [
     tags: ["RAG", "Material Science", "Graph-based Systems", "LLM"]
   },
   {
-    id: 2,
+    id: 4,
     title: "A SAR-Based Approach to Recognize Text in Syloti Nagri",
     authors: [
       { name: "Mirza Nihal Baig", isMe: true },

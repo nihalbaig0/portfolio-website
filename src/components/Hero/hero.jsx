@@ -31,8 +31,8 @@ const SocialLink = ({ href, icon: Icon }) => (
 const Hero = () => {
   const stats = [
     { value: "2", label: "Years Research Assistant" },
-    { value: "2", label: "Publications" },
-    { value: "1", label: "Year Professional Experience" }
+    { value: "4", label: "Publications" },
+    { value: "2", label: "Years Experience" }
   ];
 
   const socialLinks = [
@@ -61,10 +61,10 @@ const Hero = () => {
                 Mirza Nihal Baig
               </h1>
               <p className="text-lg text-gray-400">
-                Machine Learning Engineer
+                Chief Technical Officer
               </p>
               <p className="text-lg text-gray-400">
-                Computer Science and Engineering Graduate Student
+                AI / MLOps & Production ML Systems
               </p>
             </div>
 
@@ -82,7 +82,7 @@ const Hero = () => {
                 Contact Me
               </a>
               <a 
-                href="https://drive.google.com/file/d/1XGPDkXLIPu6KrQ00J6Xkps8VVYZwA9oK/view?usp=sharing" 
+                href="https://drive.google.com/file/d/12qeI5TcsObYMJ2QecXTgGBGqwQsOTE1k/view?usp=sharing" 
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700 hover:border-blue-500 transition-all duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -126,10 +126,12 @@ const Hero = () => {
               
               <div className="relative rounded-2xl overflow-hidden">
                 <img 
-                  src="https://github.com/nihalbaig0/portfolio-website/blob/main/src/assets/Headshot.png?raw=true"
+                  src="/headshot.png"
                   alt="Mirza Nihal Baig - Profile Picture"
                   className="relative w-full h-auto transition duration-300 group-hover:scale-105"
                   loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
                 />
               </div>
             </div>

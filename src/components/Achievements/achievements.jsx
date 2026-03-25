@@ -7,7 +7,7 @@ const achievementData = [
     title: "Prefinalist | Singapore AUV Challenge",
     event: "Singapore AUV Challenge 2024",
     description: "Advanced to the prefinal stage with the Orca AUV featuring vision-based navigation and control systems.",
-    impact: "",
+    impact: "Prefinal Stage",
     icon: Trophy,
     link: "https://sauvc.org/",
     category: "competition"
@@ -15,9 +15,9 @@ const achievementData = [
   {
     id: 2,
     title: "Finalist | Hult Prize Campus Round",
-    event: "Hult Prize 2024",
-    description: "As part of Team Nebula Pulse, developed an IoT-based Pill Dispenser (MedPunctual) using Azure Computer Vision for pill detection and timely medication delivery.",
-    impact: "",
+    event: "Feb 2024",
+    description: "Developed an IoT-based pill dispenser using Azure Computer Vision as part of Team Nebula Pulse.",
+    impact: "Finalist",
     icon: Medal,
     category: "competition",
     link: "https://www.facebook.com/share/p/UwZaBEXCNwRDLWG3/"
@@ -27,7 +27,7 @@ const achievementData = [
     title: "Honourable Mention (Top 8) | AI for Bangla 2.0",
     event: "AI for Bangla 2.0",
     description: "As part of Team SIGN_SUST, developed a complete pipeline for detecting Bengali Sign Language, encompassing the entire workflow from data annotation to deployment.",
-    impact: "",
+    impact: "Top 8",
     icon: Star,
     category: "academic",
     link: "https://drive.google.com/file/d/1Ygq_FRvmM-p80Pwry2p7xh5TmvmEmOuc/view"
@@ -35,9 +35,9 @@ const achievementData = [
   {
     id: 4,
     title: "4th Position | DLSprint 2.0",
-    event: "BUET CSE Fest 2023",
-    description: "Achieved 4th position in the Deep Learning Sprint competition focused on Bengali Document Layout Analysis.",
-    impact: "",
+    event: "2023",
+    description: "DLSprint 2.0 is a Deep Learning competition focused on Bengali Document Layout Analysis. Secured 4th position.",
+    impact: "Top 4",
     icon: Medal,
     category: "competition",
     link: "https://www.kaggle.com/competitions/dlsprint2/discussion/433389"
@@ -45,9 +45,9 @@ const achievementData = [
   {
     id: 5,
     title: "Best Paper Award",
-    event: "6th International Conference on Electrical Information and Communication Technology (EICT) 2023",
+    event: "Dec 2023 | EICT 2023",
     description: "Received the Best Paper Award for 'A SAR-Based Approach to Recognize Text in Syloti Nagri', addressing complex character shapes and enabling digitization of historical texts.",
-    impact: "",
+    impact: "Best Paper",
     icon: Trophy,
     category: "research",
     link: "https://www.researchgate.net/publication/378193712_A_SAR-Based_Approach_to_Recognize_Text_in_Syloti_Nagri"

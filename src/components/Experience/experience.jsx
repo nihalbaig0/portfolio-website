@@ -13,24 +13,32 @@ import {
 // Data
 const professionalExperience = [
   {
+    title: "Chief Technical Officer",
+    company: "SigmoiX AI (Remote, United States)",
+    period: "Aug 2025 - Present",
+    description: "Leading production ML and LLM systems, RAG pipelines, real-time AI, and scalable cloud and self-hosted deployments.",
+    technologies: ["LLMs", "RAG", "Production ML", "Cloud Deployments", "Self-hosted"],
+    icon: Briefcase
+  },
+  {
     title: "MLOps Engineer",
-    company: "Magicmind AI",
-    period: "Jun 2024 - Present",
+    company: "Magicmind AI (Remote, United States)",
+    period: "May 2025 - Dec 2025",
     description: "Building a microservice-based agentic product infrastructure using NATS and Redis Streams for distributed communication and real-time data flow. Developing CI/CD pipelines for scalable deployment and continuous monitoring of AI agents.",
     technologies: ["NATS", "Redis Streams", "CI/CD", "Microservices", "Docker", "Kubernetes"],
     icon: Brain
   },
   {
     title: "Machine Learning Engineer & Researcher",
-    company: "Rumman Arefin",
+    company: "Intelsense AI (Dhaka, Bangladesh)",
     period: "Sep 2024 - Sep 2025",
     description: "Designing and deploying production-ready AI models, developing scalable MLOps and data pipelines for Large Language Models (LLMs).",
-    technologies: ["LLM", "MLOps", "Data Pipelines", "Python"],
+    technologies: ["LLMs", "MLOps", "Data Pipelines", "Production ML", "Python"],
     icon: Code
   },
   {
     title: "Deep Learning Engineer",
-    company: "Antar Roy",
+    company: "Re:cruit (Sylhet, Bangladesh)",
     period: "Mar 2024 - Jun 2024",
     description: "Developed and deployed real-time object detection models optimized for edge devices, improving performance and accuracy.",
     technologies: ["YOLOv8", "PyTorch", "Edge Deployment", "OpenCV"],
@@ -38,7 +46,7 @@ const professionalExperience = [
   },
   {
     title: "University Research Assistant",
-    company: "Mohammad Shahidur Rahman - SUST",
+    company: "SUST (Sylhet, Bangladesh)",
     period: "Jun 2022 - Oct 2024",
     description: "Conducted research in Object Detection, Instance Segmentation, and Speech-to-Speech Translation. Mentored students and contributed to the SUST CSE Archive of Research (SCAR).",
     technologies: ["Computer Vision", "ASR", "OCR", "Python", "PyTorch"],
@@ -46,7 +54,7 @@ const professionalExperience = [
   },
   {
     title: "Robotics Engineer",
-    company: "Maruf Abbasi",
+    company: "Boltu Robotics (Seattle, United States)",
     period: "Apr 2021 - Jun 2021",
     description: "Developed object detection models for autonomous vehicles and implemented automated training pipelines using AWS SageMaker.",
     technologies: ["Python", "AWS SageMaker", "PyTorch", "Jetson Xavier"],
@@ -56,49 +64,38 @@ const professionalExperience = [
 
 const voluntaryExperience = [
   {
-    title: "Event Lead - DL Enigma 1.0",
-    organization: "SUST CSE Carnival 2024",
-    period: "2024",
-    icon: Brain,
-    description: "Organized   Deep Learning competition focused on autonomous vehicle object detection for local road conditions.",
-    achievements: [
-      "Curated specialized dataset of Bangladeshi road scenarios",
-      "Managed evaluation pipeline for object detection models",
-      "Secured industry sponsorships and professional judges"
-    ]
-  },
-  {
     title: "Microsoft Learn Student Ambassador",
     organization: "Microsoft",
-    period: "2023 - 2024",
+    period: "2022 - 2023",
     icon: Users,
-    description: "Empowering students with technology skills through workshops and events. Organized 2 technical workshops and one community project.",
+    description: "Conducted workshops on Azure IoT, GitHub Codespaces, and Computer Vision; co-organized Open Source Summit Bangladesh: SUST.",
     achievements: [
-      "Beta status achievement for community impact",
-      "Hosted Azure cloud Vision and Azure IOT  workshops",
-      "Mentored students for Pre-Alpha stage"
-    ]
-  },
-  {
-    title: "Director of Robotics",
-    organization: "University Robotics Club",
-    period: "2023 - 2024",
-    icon: Rocket,
-    description: "Technical lead of the Robotics club managing technical projects and workshops.",
-    achievements: [
-      "Judge of Line Follower Robot Competition",
-      "Responsible for Curriculum of Workshops and Technical Projects",
-      "Organized 2 successful robotics Workshops"
+      "Led hands-on Azure IoT & Computer Vision workshops",
+      "Organized GitHub Codespaces learning sessions",
+      "Co-organized Open Source Summit Bangladesh: SUST"
     ]
   },
   {
     title: "Section Leader",
-    organization: "Stanford University",
-    period: "2023" ,
+    organization: "Stanford University (Code in Place)",
+    period: "2022",
     icon: School,
-    description: "Section Leader for Code in Place. Conducted weekly sessions and provided one-on-one mentoring.",
+    description: "Mentored students in Stanford's global intro-to-coding course.",
     achievements: [
-      "Mentored 10+ students from different countries",
+      "Provided one-on-one coding support",
+      "Guided students through weekly assignments"
+    ]
+  },
+  {
+    title: "Director of Robotics",
+    organization: "RoboSUST",
+    period: "2023 - 2024",
+    icon: Rocket,
+    description: "Led technical teams on robotics projects, developed workshop curricula, and organized competitions.",
+    achievements: [
+      "Led technical teams on robotics projects",
+      "Developed workshop curricula and training materials",
+      "Organized robotics competitions"
     ]
   }
 ];

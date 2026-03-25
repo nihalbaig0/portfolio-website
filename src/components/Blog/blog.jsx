@@ -15,6 +15,20 @@ import {
 
 const blogPosts = [
   {
+    id: 3,
+    title: "Deploying Whisper model 5x-7x Cheaper than AWS on Vast.ai",
+    date: "2025",
+    readTime: "7 min read",
+    preview: "A practical walkthrough on deploying Whisper on Vast.ai with significantly lower cost than AWS while maintaining strong inference performance for speech workloads.",
+    image: "https://images.unsplash.com/photo-1643652631396-181154ca7d8a?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["Whisper", "Vast.ai", "MLOps", "Cost Optimization"],
+    category: "mlops",
+    likes: 0,
+    comments: 0,
+    saved: false,
+    url: "https://substack.com/home/post/p-179915400"
+  },
+  {
     id: 1,
     title: "Stream Data to Azure IoT Hub from Raspberry Pi",
     date: "Feb 25, 2024",

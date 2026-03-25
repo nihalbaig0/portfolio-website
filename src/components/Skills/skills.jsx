@@ -72,7 +72,7 @@ const Skills = () => {
       title: "MLOps & Tools",
       icon: Cloud,
       description: "ML operations and infrastructure",
-      skills: ["DVC", "MLflow", "Apache Airflow", "Weights & Biases", "AWS SageMaker", "Docker", "Kubernetes", "Git", "Streamlit", "Gradio"]
+      skills: ["DVC", "MLflow", "Apache Airflow", "Weights & Biases (WandB)", "AWS SageMaker", "Docker", "Kubernetes", "Git", "Streamlit", "Gradio"]
     },
     {
       title: "Robotics",
@@ -85,12 +85,6 @@ const Skills = () => {
       icon: Terminal,
       description: "Infrastructure and monitoring",
       skills: ["Prometheus", "Grafana", "Pulumi", "Terraform", "OpenTelemetry"]
-    },
-    {
-      title: "Web Technologies",
-      icon: Code,
-      description: "Frontend & backend frameworks",
-      skills: ["React", "Node.js", "Express", "Django", "FastAPI", "REST", "GraphQL"]
     }
   ];
 

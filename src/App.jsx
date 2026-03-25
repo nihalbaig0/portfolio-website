@@ -15,6 +15,7 @@ import Featured from './components/Featured/featured';
 import Contact from './components/Contact/contact';
 import LanguagesSection from './components/Languages/languages';
 import LeadershipSection from './components/Leadership/leadership';
+import EducationSection from './components/Education/education';
 
 const Portfolio = () => {
 
@@ -35,6 +36,7 @@ const Portfolio = () => {
 
         
         {/* Experience Section */}  
+        <EducationSection />
         <ExperienceSection />
 
         {/* Skills Section */}

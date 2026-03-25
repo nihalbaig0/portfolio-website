@@ -10,9 +10,9 @@ const leadershipData = [
     icon: Users,
     description: "Conducted workshops on Azure IoT, GitHub Codespaces, and Computer Vision; co-organized Open Source Summit Bangladesh: SUST.",
     achievements: [
-      "Conducted technical workshops on Azure services",
+      "Conducted hands-on Azure IoT & Computer Vision workshops",
       "Led GitHub Codespaces training sessions",
-      "Organized Open Source Summit Bangladesh"
+      "Co-organized Open Source Summit Bangladesh: SUST"
     ]
   },
   {
@@ -23,9 +23,8 @@ const leadershipData = [
     icon: BookOpen,
     description: "Mentored students in Stanford's global intro-to-coding course.",
     achievements: [
-      "Mentored 10+ students from different countries",
       "Provided one-on-one coding support",
-      "Graded assignments and projects"
+      "Mentored students through weekly course sessions"
     ]
   },
   {
@@ -34,12 +33,11 @@ const leadershipData = [
     organization: "RoboSUST",
     period: "2023 - 2024",
     icon: Trophy,
-    description: "Led technical teams on robotics projects, developed workshop curricula, and organized DL Enigma 2.0 for SUST CSE Carnival 2024.",
+    description: "Led technical teams on robotics projects, developed workshop curricula, and organized competitions.",
     achievements: [
       "Led technical teams on robotics projects",
       "Developed workshop curricula for students",
-      "Organized DL Enigma 2.0 - Bangladesh's first national deep learning competition",
-      "Coordinated with 100+ participants from multiple universities"
+      "Organized robotics competitions"
     ]
   }
 ];
