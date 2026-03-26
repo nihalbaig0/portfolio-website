@@ -1,15 +1,13 @@
 import React from 'react';
-import { 
-  CalendarDays, 
-  ExternalLink, 
-  Heart, 
-  MessageSquare, 
-  Award,
+import {
+  CalendarDays,
+  ExternalLink,
+  Heart,
+  MessageSquare,
   Newspaper,
-  Radio,
-  Video,
   Link2
 } from 'lucide-react';
+import useScrollReveal from '../../hooks/useScrollReveal';
 
 const featuredContent = {
   articles: [
@@ -42,56 +40,53 @@ const featuredContent = {
   ]
 };
 
-// Rest of the component code remains the same
 const FeaturedCard = ({ item }) => {
   const Icon = item.icon;
-  
+
   return (
-    <div className="group bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
+    <div className="group glass-card p-6">
       <div className="flex items-start gap-6">
         {item.type === 'article' && (
-          <div className="flex-shrink-0 w-32 h-32 overflow-hidden rounded-lg">
-            <img 
-              src={item.image} 
+          <div className="flex-shrink-0 w-32 h-32 overflow-hidden rounded-xl border border-slate-700/30">
+            <img
+              src={item.image}
               alt={item.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
           </div>
         )}
-        
+
         <div className="flex-1">
-          <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
-            <div className="p-1.5 bg-blue-500/10 rounded-lg">
-              <Icon className="w-4 h-4 text-blue-400" />
+          <div className="flex items-center gap-2 text-sm text-slate-400 mb-2">
+            <div className="p-1.5 bg-teal-500/10 rounded-lg">
+              <Icon className="w-4 h-4 text-teal-400" />
             </div>
-            <span className="px-2 py-1 bg-blue-500/10 text-blue-400 rounded-lg">
-              {item.outlet}
-            </span>
-            <span>•</span>
+            <span className="accent-chip text-xs">{item.outlet}</span>
+            <span className="text-slate-600">|</span>
             <div className="flex items-center gap-1">
               <CalendarDays className="w-4 h-4" />
               {item.date}
             </div>
           </div>
-          
-          <h3 className="text-xl font-semibold text-gray-100 group-hover:text-blue-400 transition-colors duration-300 mb-2">
+
+          <h3 className="text-xl font-semibold text-slate-100 group-hover:text-teal-400 transition-colors duration-300 mb-2">
             {item.title}
           </h3>
-          
-          <p className="text-gray-400 mb-4">{item.excerpt}</p>
-          
+
+          <p className="text-slate-400 mb-4 text-sm">{item.excerpt}</p>
+
           <div className="flex items-center gap-6">
-            <a 
+            <a
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors duration-300"
+              className="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors duration-300 text-sm"
             >
               Read More
               <ExternalLink className="w-4 h-4" />
             </a>
-            
-            <div className="flex items-center gap-4 text-gray-400">
+
+            <div className="flex items-center gap-4 text-slate-500 text-sm">
               <span className="flex items-center gap-1">
                 <Heart className="w-4 h-4" />
                 {item.likes}
@@ -109,30 +104,23 @@ const FeaturedCard = ({ item }) => {
 };
 
 const Featured = () => {
+  const revealRef = useScrollReveal();
+
   return (
-    <section className="relative py-20">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-purple-500/5 to-transparent" />
-        <div className="absolute inset-0 bg-grid-white/[0.02]" />
+    <div className="relative" ref={revealRef}>
+      <div className="flex items-center gap-4 mb-12 reveal">
+        <div className="p-2.5 bg-teal-500/10 rounded-xl">
+          <Link2 className="w-6 h-6 text-teal-400" />
+        </div>
+        <h2 className="section-heading">Featured In</h2>
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-6">
-        <div className="flex items-center gap-4 mb-12">
-          <div className="p-2 bg-blue-500/10 rounded-xl">
-            <Link2 className="w-6 h-6 text-blue-400" />
-          </div>
-          <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-            Featured In
-          </h2>
-        </div>
-
-        <div className="space-y-6">
-          {featuredContent.articles.map(article => (
-            <FeaturedCard key={article.id} item={article} />
-          ))}
-        </div>
+      <div className="space-y-6 reveal reveal-delay-1">
+        {featuredContent.articles.map(article => (
+          <FeaturedCard key={article.id} item={article} />
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 

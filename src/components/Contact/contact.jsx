@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
+import useScrollReveal from '../../hooks/useScrollReveal';
 
 const ContactInfo = () => {
   const contactDetails = {
@@ -14,34 +15,18 @@ const ContactInfo = () => {
   };
 
   return (
-    <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
+    <div className="glass-card p-8 rounded-2xl">
       <div className="mb-8">
-        <h3 className="text-xl font-semibold text-gray-100 mb-4">Let's Connect</h3>
-        <p className="text-gray-400">
+        <h3 className="text-xl font-semibold text-slate-100 mb-4">Let's Connect</h3>
+        <p className="text-slate-400">
           Feel free to reach out for collaborations, research opportunities, or just to say hello!
         </p>
       </div>
 
       <div className="space-y-6">
-        <ContactItem
-          icon={Mail}
-          label="Email"
-          value={contactDetails.email}
-          href={`mailto:${contactDetails.email}`}
-        />
-        
-        <ContactItem
-          icon={Phone}
-          label="Phone"
-          value={contactDetails.phoneDisplay}
-          href={`tel:${contactDetails.phoneHref}`}
-        />
-        
-        <ContactItem
-          icon={MapPin}
-          label="Location"
-          value={contactDetails.location}
-        />
+        <ContactItem icon={Mail} label="Email" value={contactDetails.email} href={`mailto:${contactDetails.email}`} />
+        <ContactItem icon={Phone} label="Phone" value={contactDetails.phoneDisplay} href={`tel:${contactDetails.phoneHref}`} />
+        <ContactItem icon={MapPin} label="Location" value={contactDetails.location} />
 
         <div className="flex gap-4 pt-6">
           {contactDetails.socials.map((social, index) => {
@@ -50,7 +35,11 @@ const ContactInfo = () => {
               <a
                 key={index}
                 href={social.link}
-                className="p-3 bg-gray-700/50 rounded-xl hover:bg-blue-500/20 text-gray-400 hover:text-blue-400 transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-slate-800/60 border border-slate-700/50 rounded-xl
+                           hover:border-teal-500/30 hover:bg-teal-500/5 text-slate-400 hover:text-teal-400
+                           transition-all duration-300"
                 aria-label={social.label}
               >
                 <Icon className="w-6 h-6" />
@@ -65,31 +54,24 @@ const ContactInfo = () => {
 
 const ContactItem = ({ icon: Icon, label, value, href }) => (
   <div className="flex items-center gap-4 group">
-    <div className="p-3 bg-blue-500/10 rounded-xl group-hover:bg-blue-500/20 transition-all duration-300">
-      <Icon className="w-6 h-6 text-blue-400" />
+    <div className="p-3 bg-teal-500/10 rounded-xl group-hover:bg-teal-500/15 transition-all duration-300">
+      <Icon className="w-6 h-6 text-teal-400" />
     </div>
     <div>
-      <p className="text-sm text-gray-400">{label}</p>
+      <p className="text-sm text-slate-400">{label}</p>
       {href ? (
-        <a
-          href={href}
-          className="text-gray-200 hover:text-blue-400 transition-colors duration-300"
-        >
+        <a href={href} className="text-slate-200 hover:text-teal-400 transition-colors duration-300">
           {value}
         </a>
       ) : (
-        <p className="text-gray-200">{value}</p>
+        <p className="text-slate-200">{value}</p>
       )}
     </div>
   </div>
 );
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState({ type: '', message: '' });
 
@@ -106,9 +88,7 @@ const ContactForm = () => {
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
@@ -120,133 +100,70 @@ const ContactForm = () => {
           data?.hint,
           data?.resendStatus != null ? `(Resend HTTP ${data.resendStatus})` : null,
         ].filter(Boolean);
-        throw new Error(
-          parts.length ? parts.join(' — ') : 'Could not send message right now.'
-        );
+        throw new Error(parts.length ? parts.join(' — ') : 'Could not send message right now.');
       }
 
       setFormData({ name: '', email: '', message: '' });
-      setStatus({
-        type: 'success',
-        message: 'Message sent successfully. I will get back to you soon.',
-      });
+      setStatus({ type: 'success', message: 'Message sent successfully. I will get back to you soon.' });
     } catch (error) {
-      setStatus({
-        type: 'error',
-        message: error.message || 'Something went wrong while sending your message.',
-      });
+      setStatus({ type: 'error', message: error.message || 'Something went wrong while sending your message.' });
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  const inputClasses = `w-full px-4 py-3 bg-slate-900/50 border border-slate-700/50 rounded-xl
+                        focus:border-teal-500/50 focus:ring-1 focus:ring-teal-500/30
+                        transition-all duration-300 text-slate-100 placeholder:text-slate-500`;
+
   return (
-    <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
+    <div className="glass-card p-8 rounded-2xl">
       <form onSubmit={handleSubmit} className="space-y-6">
-        <FormField
-          label="Name"
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Your name"
-          required
-        />
+        <div>
+          <label htmlFor="name" className="block text-sm text-slate-400 mb-2">Name</label>
+          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange}
+                 placeholder="Your name" required className={inputClasses} />
+        </div>
 
-        <FormField
-          label="Email"
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="your@email.com"
-          required
-        />
+        <div>
+          <label htmlFor="email" className="block text-sm text-slate-400 mb-2">Email</label>
+          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange}
+                 placeholder="your@email.com" required className={inputClasses} />
+        </div>
 
-        <FormField
-          label="Message"
-          type="textarea"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          placeholder="Your message..."
-          required
-        />
+        <div>
+          <label htmlFor="message" className="block text-sm text-slate-400 mb-2">Message</label>
+          <textarea id="message" name="message" rows={4} value={formData.message} onChange={handleChange}
+                    placeholder="Your message..." required className={inputClasses} />
+        </div>
 
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-500 text-white hover:bg-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
+        <button type="submit" disabled={isSubmitting} className="accent-button w-full justify-center disabled:opacity-50 disabled:cursor-not-allowed">
           <Send className="w-5 h-5" />
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
 
-        {status.message ? (
-          <p
-            className={`text-sm ${
-              status.type === 'success' ? 'text-green-400' : 'text-red-400'
-            }`}
-          >
+        {status.message && (
+          <p className={`text-sm ${status.type === 'success' ? 'text-emerald-400' : 'text-red-400'}`}>
             {status.message}
           </p>
-        ) : null}
+        )}
       </form>
     </div>
   );
 };
 
-const FormField = ({ label, type, name, value, onChange, placeholder, required }) => (
-  <div>
-    <label htmlFor={name} className="block text-sm text-gray-400 mb-2">
-      {label}
-    </label>
-    {type === 'textarea' ? (
-      <textarea
-        id={name}
-        name={name}
-        rows={4}
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        required={required}
-        className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-xl focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300 text-gray-100"
-      />
-    ) : (
-      <input
-        type={type}
-        id={name}
-        name={name}
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        required={required}
-        className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-xl focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300 text-gray-100"
-      />
-    )}
-  </div>
-);
-
 const Contact = () => {
+  const revealRef = useScrollReveal();
+
   return (
-    <section className="relative py-20" id="contact">
-      {/* Background gradient effects */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-blue-500/5 blur-[100px] rounded-full" />
-        <div className="absolute right-0 top-0 bg-purple-500/5 blur-[100px] rounded-full h-[300px] w-[300px]" />
-      </div>
+    <div className="relative" ref={revealRef}>
+      <h2 className="section-heading mb-12 reveal">Get in Touch</h2>
 
-      <div className="relative max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-          Get in Touch
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          <ContactInfo />
-          <ContactForm />
-        </div>
+      <div className="grid md:grid-cols-2 gap-8 reveal reveal-delay-1">
+        <ContactInfo />
+        <ContactForm />
       </div>
-    </section>
+    </div>
   );
 };
 

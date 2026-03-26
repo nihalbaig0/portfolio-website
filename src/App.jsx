@@ -1,85 +1,48 @@
-// Since there's a syntax error in the React component rendering, let's show it as a code snippet first
-// Once we confirm the syntax is correct, we can switch back to application/vnd.ant.react
-
 import React from 'react';
-import FilteredProjects from './components/Projects/projects';
-import Skills from './components/Skills/skills';
+import Navbar from './components/Navbar/navbar';
+import Hero from './components/Hero/hero';
+import EducationSection from './components/Education/education';
 import ExperienceSection from './components/Experience/experience';
-import WorkshopsAndTalks from './components/Workshops/workshop';
+import Skills from './components/Skills/skills';
 import NotableAchievements from './components/Achievements/achievements';
+import FilteredProjects from './components/Projects/projects';
 import Publications from './components/Publications/publications';
 import Certifications from './components/Certification/certification';
-import BlogPosts from './components/Blog/blog';
-import Hero from './components/Hero/hero';
-import Featured from './components/Featured/featured';
-import Contact from './components/Contact/contact';
 import LanguagesSection from './components/Languages/languages';
 import LeadershipSection from './components/Leadership/leadership';
-import EducationSection from './components/Education/education';
+import BlogPosts from './components/Blog/blog';
+import WorkshopsAndTalks from './components/Workshops/workshop';
+import Featured from './components/Featured/featured';
+import Contact from './components/Contact/contact';
 
 const Portfolio = () => {
-
-
-
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-900 to-black text-gray-100">
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] -z-10" />
-      
+    <div className="min-h-screen bg-slate-950 text-slate-100 noise-overlay">
+      <div className="fixed inset-0 bg-dot-grid bg-dot-grid pointer-events-none -z-10" />
+
+      <Navbar />
       <Hero />
-  
-      {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-6 py-20 space-y-32">
-        
-       
-     
 
-        
-        {/* Experience Section */}  
-        <EducationSection />
-        <ExperienceSection />
-
-        {/* Skills Section */}
-        <Skills />
-
-       {/* Achievements Section */}
-        <NotableAchievements />
-
-        {/* Projects Section */}
-        <FilteredProjects />
-
-        {/* Publication Section */}
-        <Publications />
-
-       {/* Certifications Section */}
-         <Certifications />
-
-         {/* Languages Section */}
-         <LanguagesSection />
-
-         {/* Leadership Section */}
-         <LeadershipSection />
-         
-         {/* Blogs Section */}
-         <BlogPosts />
-
-         {/* Workshop Section */}
-         <WorkshopsAndTalks />
-
-       {/* Featured Section */}
-        <Featured />
-
-         <Contact />
-
-
-     
+      <main className="max-w-6xl mx-auto px-6 py-20 space-y-24">
+        <section id="education"><EducationSection /></section>
+        <section id="experience"><ExperienceSection /></section>
+        <section id="skills"><Skills /></section>
+        <section id="achievements"><NotableAchievements /></section>
+        <section id="projects"><FilteredProjects /></section>
+        <section id="publications"><Publications /></section>
+        <section id="certifications"><Certifications /></section>
+        <section id="languages"><LanguagesSection /></section>
+        <section id="leadership"><LeadershipSection /></section>
+        <section id="blog"><BlogPosts /></section>
+        <section id="workshops"><WorkshopsAndTalks /></section>
+        <section id="featured"><Featured /></section>
+        <section id="contact"><Contact /></section>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-gray-800">
+      <footer className="border-t border-slate-800/80">
         <div className="max-w-6xl mx-auto px-6 py-12">
-          <p className="text-center text-gray-500">
-            © Made By MIRZA NIHAL BAIG
+          <p className="text-center text-slate-500 text-sm">
+            &copy; {new Date().getFullYear()} Mirza Nihal Baig. All rights reserved.
           </p>
         </div>
       </footer>

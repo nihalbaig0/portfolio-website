@@ -1,25 +1,23 @@
 import React from 'react';
-import { 
-  BookOpen, 
-  Calendar, 
-  ExternalLink, 
+import {
+  BookOpen,
+  Calendar,
+  ExternalLink,
   FileText,
-  Users,
   GitBranch,
   Tag,
   ArrowUpRight,
   Database
 } from 'lucide-react';
+import useScrollReveal from '../../hooks/useScrollReveal';
 
-// Publication types and their associated colors
 const PUBLICATION_TYPES = {
-  'conference': { label: 'Conference Paper', color: 'blue' },
-  'journal': { label: 'Journal Article', color: 'purple' },
-  'workshop': { label: 'Workshop Paper', color: 'green' },
-  'preprint': { label: 'Preprint', color: 'orange' }
+  'conference': { label: 'Conference Paper', classes: 'bg-teal-500/10 text-teal-400' },
+  'journal': { label: 'Journal Article', classes: 'bg-cyan-500/10 text-cyan-400' },
+  'workshop': { label: 'Workshop Paper', classes: 'bg-emerald-500/10 text-emerald-400' },
+  'preprint': { label: 'Preprint', classes: 'bg-amber-500/10 text-amber-400' }
 };
 
-// Sample publications data
 const publicationsData = [
   {
     id: 1,
@@ -104,7 +102,7 @@ const PublicationLinks = ({ publication }) => {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 transition-colors duration-300"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-teal-500/10 hover:bg-teal-500/20 text-teal-400 transition-colors duration-300 text-sm"
           >
             <Icon size={16} />
             <span>{link.label}</span>
@@ -116,55 +114,51 @@ const PublicationLinks = ({ publication }) => {
 };
 
 const PublicationCard = ({ publication }) => {
-  const typeColor = PUBLICATION_TYPES[publication.type].color;
+  const typeInfo = PUBLICATION_TYPES[publication.type];
 
   return (
-    <div className="group bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
+    <div className="group glass-card p-6">
       <div className="space-y-4">
-        {/* Header */}
-        <div className="space-y-1">
+        <div className="space-y-2">
           <div className="flex items-center gap-2 text-sm">
-            <span className={`px-2 py-1 bg-${typeColor}-500/10 text-${typeColor}-400 rounded-lg`}>
-              {PUBLICATION_TYPES[publication.type].label}
+            <span className={`px-2.5 py-1 rounded-lg ${typeInfo.classes}`}>
+              {typeInfo.label}
             </span>
-            <span className="text-gray-400">•</span>
-            <span className="flex items-center gap-1 text-gray-400">
+            <span className="text-slate-600">|</span>
+            <span className="flex items-center gap-1 text-slate-400">
               <Calendar className="w-4 h-4" />
               {publication.year}
             </span>
           </div>
-          
-          <h3 className="text-xl font-semibold text-gray-100 group-hover:text-blue-400 transition-colors duration-300">
+
+          <h3 className="text-xl font-semibold text-slate-100 group-hover:text-teal-400 transition-colors duration-300">
             {publication.title}
           </h3>
-          
-          <div className="flex flex-wrap items-center gap-2 text-sm text-gray-400">
+
+          <div className="flex flex-wrap items-center gap-2 text-sm text-slate-400">
             {publication.authors.map((author, index) => (
               <React.Fragment key={index}>
-                <span className={author.isMe ? "text-blue-400 font-medium" : ""}>
+                <span className={author.isMe ? "text-teal-400 font-medium" : ""}>
                   {author.name}
                 </span>
-                {index < publication.authors.length - 1 && <span>•</span>}
+                {index < publication.authors.length - 1 && <span className="text-slate-600">·</span>}
               </React.Fragment>
             ))}
           </div>
         </div>
 
-        {/* Venue */}
-        <div className="flex items-center gap-2 text-gray-300">
-          <BookOpen className="w-4 h-4" />
+        <div className="flex items-center gap-2 text-slate-300 text-sm">
+          <BookOpen className="w-4 h-4 text-teal-400/60" />
           <span>{publication.venue}</span>
         </div>
 
-        {/* Links */}
         <PublicationLinks publication={publication} />
 
-        {/* Tags */}
         <div className="flex flex-wrap gap-2">
           {publication.tags.map((tag, index) => (
             <span
               key={index}
-              className="inline-flex items-center gap-1 px-2 py-1 bg-gray-700/50 text-gray-300 rounded-lg text-sm"
+              className="inline-flex items-center gap-1 px-2 py-1 bg-slate-700/40 text-slate-300 rounded-lg text-xs"
             >
               <Tag className="w-3 h-3" />
               {tag}
@@ -179,41 +173,31 @@ const PublicationCard = ({ publication }) => {
 const Publications = () => {
   const totalCitations = 9;
   const totalPublications = publicationsData.length;
+  const revealRef = useScrollReveal();
 
   return (
-    <section className="relative py-20">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-purple-500/5 to-transparent" />
-        <div className="absolute inset-0 bg-grid-white/[0.02]" />
-      </div>
+    <div className="relative" ref={revealRef}>
+      <div className="mb-12">
+        <h2 className="section-heading reveal">Publications</h2>
 
-      <div className="relative max-w-6xl mx-auto px-6">
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-            Publications
-          </h2>
-          
-          {/* Publication Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-            <div className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/50">
-              <div className="text-2xl font-bold text-blue-400 mb-1">{totalPublications}</div>
-              <div className="text-sm text-gray-400">Publications</div>
-            </div>
-            <div className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/50">
-              <div className="text-2xl font-bold text-purple-400 mb-1">{totalCitations}</div>
-              <div className="text-sm text-gray-400">Citations</div>
-            </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 reveal reveal-delay-1">
+          <div className="glass-card p-4">
+            <div className="text-2xl font-bold text-teal-400 mb-1">{totalPublications}</div>
+            <div className="text-sm text-slate-400">Publications</div>
+          </div>
+          <div className="glass-card p-4">
+            <div className="text-2xl font-bold text-cyan-400 mb-1">{totalCitations}</div>
+            <div className="text-sm text-slate-400">Citations</div>
           </div>
         </div>
-
-        <div className="space-y-6">
-          {publicationsData.map((publication) => (
-            <PublicationCard key={publication.id} publication={publication} />
-          ))}
-        </div>
       </div>
-    </section>
+
+      <div className="space-y-6 reveal reveal-delay-2">
+        {publicationsData.map((publication) => (
+          <PublicationCard key={publication.id} publication={publication} />
+        ))}
+      </div>
+    </div>
   );
 };
 
