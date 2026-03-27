@@ -13,7 +13,7 @@ import useScrollReveal from '../../hooks/useScrollReveal';
 
 const professionalExperience = [
   {
-    title: "Chief Technical Officer",
+    title: "Chief Technology Officer",
     company: "SigmoiX AI (Remote, United States)",
     period: "Aug 2025 - Present",
     description: "Leading production ML and LLM systems, RAG pipelines, real-time AI, and scalable cloud and self-hosted deployments.",

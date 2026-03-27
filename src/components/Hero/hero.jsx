@@ -67,7 +67,7 @@ const Hero = () => {
                 Mirza Nihal Baig
               </h1>
               <p className="text-xl text-slate-300 font-medium">
-                Chief Technical Officer
+                Chief Technology Officer
               </p>
               <p className="text-lg text-slate-400">
                 AI / MLOps &amp; Production ML Systems
